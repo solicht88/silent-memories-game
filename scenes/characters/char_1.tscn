@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/animations/char_1.tscn.gd" id="1_biv15"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vj08"]
-size = Vector2(41, 29)
+size = Vector2(60, 29)
 
 [sub_resource type="Animation" id="Animation_1a1mq"]
 length = 0.001
