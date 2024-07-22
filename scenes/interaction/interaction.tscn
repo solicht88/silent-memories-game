@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://clv1blmp0vs7"]
+
+[ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="1_hsken"]
+
+[node name="Interaction" type="Node2D"]
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_hsken")]

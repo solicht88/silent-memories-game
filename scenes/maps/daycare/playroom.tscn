@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=11 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
 [ext_resource type="Texture2D" uid="uid://gh1w7ff7malh" path="res://tilesets/daycare/playroom_furniture.png" id="2_cf08f"]
@@ -677,6 +677,18 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wrlje")
 sources/1 = SubResource("TileSetAtlasSource_1cn55")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7qya"]
+size = Vector2(20, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svdru"]
+size = Vector2(1290, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oyuli"]
+size = Vector2(600, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piyna"]
+size = Vector2(1280, 20)
+
 [node name="playroom" type="Node2D"]
 y_sort_enabled = true
 
@@ -697,3 +709,29 @@ layer_2/tile_data = PackedInt32Array(393229, 720897, 5, 393218, 1, 5, 196611, 19
 z_index = 1
 y_sort_enabled = true
 position = Vector2(640, 630)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="left_edge" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 360)
+shape = SubResource("RectangleShape2D_e7qya")
+
+[node name="right_edge" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1280, 360)
+shape = SubResource("RectangleShape2D_e7qya")
+
+[node name="wall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(635, 85)
+shape = SubResource("RectangleShape2D_svdru")
+
+[node name="bottom1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(300, 680)
+shape = SubResource("RectangleShape2D_oyuli")
+
+[node name="bottom2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(980, 680)
+shape = SubResource("RectangleShape2D_oyuli")
+
+[node name="bottom" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(640, 730)
+shape = SubResource("RectangleShape2D_piyna")
