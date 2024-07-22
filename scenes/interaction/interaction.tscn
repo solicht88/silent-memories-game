@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://blpvy3013pf1g"]
+
+[ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="1_hsken"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d67to"]
+radius = 46.1411
+
+[node name="Node2D" type="Node2D"]
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_hsken")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_d67to")

@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bj5svrmek3bws"]
+[gd_scene load_steps=11 format=3 uid="uid://bj5svrmek3bws"]
 
 [ext_resource type="Texture2D" uid="uid://cjaq4vg860b4v" path="res://sprites/char_1_ver_2.png" id="1_236t4"]
 [ext_resource type="Script" path="res://scripts/animations/char_1.tscn.gd" id="1_biv15"]
-[ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="3_co8wr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vj08"]
 size = Vector2(60, 29)
@@ -21,6 +20,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [12]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Direction:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_lu32i"]
 resource_name = "walk_down"
@@ -37,6 +48,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Direction:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
 }
 
 [sub_resource type="Animation" id="Animation_xyr2w"]
@@ -55,6 +78,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [8, 9, 10, 11]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Direction:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.71239]
+}
 
 [sub_resource type="Animation" id="Animation_paq4t"]
 resource_name = "walk_right"
@@ -71,6 +106,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Direction:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
 }
 
 [sub_resource type="Animation" id="Animation_qpvh2"]
@@ -89,6 +136,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [12, 13, 14, 15]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Direction:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0bgva"]
 _data = {
@@ -99,21 +158,21 @@ _data = {
 "walk_up": SubResource("Animation_qpvh2")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_aaa7t"]
-radius = 75.6637
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mj0j"]
+radius = 66.3099
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_biv15")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
 position = Vector2(2.08165e-12, -40)
 texture = ExtResource("1_236t4")
 hframes = 4
 vframes = 4
 frame = 12
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
 position = Vector2(0, 56)
 shape = SubResource("RectangleShape2D_2vj08")
 
@@ -124,8 +183,8 @@ libraries = {
 
 [node name="Direction" type="Marker2D" parent="."]
 
-[node name="InteractionArea" parent="Direction" instance=ExtResource("3_co8wr")]
+[node name="InteractionFinder" type="Area2D" parent="Direction"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/InteractionArea"]
-position = Vector2(0, -76)
-shape = SubResource("CircleShape2D_aaa7t")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/InteractionFinder"]
+position = Vector2(-8.71968e-15, -89)
+shape = SubResource("CircleShape2D_0mj0j")

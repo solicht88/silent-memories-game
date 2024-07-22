@@ -6,7 +6,6 @@
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_vtm3o")
-action_name = null
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

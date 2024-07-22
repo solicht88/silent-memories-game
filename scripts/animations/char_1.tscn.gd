@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed = 300
 
 @onready var _animation_player = $AnimationPlayer
+@onready var interaction_finder: Area2D = $Direction/InteractionFinder
 
 func get_input():
 	var input_direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")
@@ -31,3 +32,10 @@ func _process(_delta):
 		_animation_player.play("walk_down")
 	else:
 		_animation_player.stop()
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		var interactions = interaction_finder.get_overlapping_areas()
+		if interactions.size() > 0:
+			interactions[0].action()
+			return
