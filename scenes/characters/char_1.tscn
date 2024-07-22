@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bj5svrmek3bws"]
+[gd_scene load_steps=12 format=3 uid="uid://bj5svrmek3bws"]
 
 [ext_resource type="Texture2D" uid="uid://cjaq4vg860b4v" path="res://sprites/char_1_ver_2.png" id="1_236t4"]
 [ext_resource type="Script" path="res://scripts/animations/char_1.tscn.gd" id="1_biv15"]
+[ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="3_co8wr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vj08"]
 size = Vector2(60, 29)
@@ -98,6 +99,9 @@ _data = {
 "walk_up": SubResource("Animation_qpvh2")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_aaa7t"]
+radius = 75.6637
+
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_biv15")
@@ -117,3 +121,11 @@ shape = SubResource("RectangleShape2D_2vj08")
 libraries = {
 "": SubResource("AnimationLibrary_0bgva")
 }
+
+[node name="Direction" type="Marker2D" parent="."]
+
+[node name="InteractionArea" parent="Direction" instance=ExtResource("3_co8wr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/InteractionArea"]
+position = Vector2(0, -76)
+shape = SubResource("CircleShape2D_aaa7t")

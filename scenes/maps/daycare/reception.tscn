@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cq304oojpibow"]
+[gd_scene load_steps=14 format=3 uid="uid://cq304oojpibow"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception.gd" id="1_6lviy"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="1_n8fkg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_r3gjr"]
 [ext_resource type="Texture2D" uid="uid://donjoan07hame" path="res://tilesets/daycare/daycare_furniture.png" id="2_omfjg"]
+[ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="5_6gira"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/playroom_door.gd" id="5_tqjya"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hep1c"]
 texture = ExtResource("1_r3gjr")
@@ -616,6 +618,9 @@ size = Vector2(1290, 170)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hxqc"]
 size = Vector2(1280, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uggs"]
+size = Vector2(80, 160)
+
 [node name="reception" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_6lviy")
@@ -654,3 +659,12 @@ shape = SubResource("RectangleShape2D_6looq")
 [node name="bottom" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(640, 730)
 shape = SubResource("RectangleShape2D_5hxqc")
+
+[node name="play_door" type="Node2D" parent="."]
+script = ExtResource("5_tqjya")
+
+[node name="InteractionArea" parent="play_door" instance=ExtResource("5_6gira")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="play_door/InteractionArea"]
+position = Vector2(200, 80)
+shape = SubResource("RectangleShape2D_2uggs")
