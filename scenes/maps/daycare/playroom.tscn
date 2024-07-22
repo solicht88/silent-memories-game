@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cad4fisymbr5o"]
+[gd_scene load_steps=10 format=3 uid="uid://cad4fisymbr5o"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
 [ext_resource type="Texture2D" uid="uid://gh1w7ff7malh" path="res://tilesets/daycare/playroom_furniture.png" id="2_cf08f"]
@@ -643,35 +643,42 @@ texture_region_size = Vector2i(80, 80)
 15:8/0/physics_layer_0/angular_velocity = 0.0
 0:5/size_in_atlas = Vector2i(5, 2)
 0:5/0 = 0
+0:5/0/y_sort_origin = 5
 0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:5/0/physics_layer_0/angular_velocity = 0.0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-154.25, -77.5, 153.75, -77.5, 154.75, 88.5, -153.75, 89.5)
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-145.75, -8.75, 143.75, -8.25, 144.25, 80.75, -0.25, 80.75, -145.25, 80.25)
 11:5/size_in_atlas = Vector2i(5, 2)
 11:5/0 = 0
+11:5/0/y_sort_origin = 5
 11:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:5/0/physics_layer_0/angular_velocity = 0.0
-11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-164.75, -87.5, 160.25, -88.5, 160.75, 88, -162.75, 89.5)
+11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-157.25, -8.75, 152.75, -7.25, 153.25, 80.75, -0.25, 80.75, -157.75, 81.25)
 10:2/size_in_atlas = Vector2i(2, 2)
 10:2/0 = 0
+10:2/0/y_sort_origin = -25
 10:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:2/0/physics_layer_0/angular_velocity = 0.0
-10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-58.25, -72, 57.75, -72, 57.75, 7, -58.25, 7)
+10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50.375, -25.375, 50.625, -25.125, 50.625, 1.375, -50.375, 1.375)
 4:2/size_in_atlas = Vector2i(2, 2)
 4:2/0 = 0
+4:2/0/y_sort_origin = -25
 4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:2/0/physics_layer_0/angular_velocity = 0.0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-58.25, -72, 57.75, -72, 57.75, 7, -58.25, 7)
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50.375, -25.375, 50.625, -25.125, 50.625, 1.375, -50.375, 1.375)
 6:2/size_in_atlas = Vector2i(1, 2)
 6:2/0 = 0
+6:2/0/y_sort_origin = 5
 6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:2/0/physics_layer_0/angular_velocity = 0.0
-6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 7.5, 17.25, 8, 17.25, 31.5, -40, 31)
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 11.625, 14.875, 12.125, 15.125, 40, -40, 40)
 3:3/0 = 0
+3:3/0/y_sort_origin = -15
 3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:3/0/physics_layer_0/angular_velocity = 0.0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32.75, -40, 47.75, -40.5, 47.75, 22, -32.75, 22.5)
 12:2/size_in_atlas = Vector2i(2, 2)
 12:2/0 = 0
+12:2/0/y_sort_origin = 5
 12:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:2/0/physics_layer_0/angular_velocity = 0.0
 12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-70.75, -11, 53.25, -12, 53.75, 40.5, -70.25, 41)
@@ -682,7 +689,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_e5adl")
 sources/1 = SubResource("TileSetAtlasSource_ux24x")
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k45yj"]
+size = Vector2(20, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pv4wu"]
+size = Vector2(1290, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v18ic"]
+size = Vector2(1280, 20)
+
+[node name="playroom" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -697,5 +713,23 @@ layer_2/y_sort_enabled = true
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(393229, 720897, 5, 393218, 1, 5, 196618, 655361, 2, 196613, 262145, 2, 196615, 393217, 2, 196620, 786433, 2, 196611, 196609, 3)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_5fvtf")]
+[node name="player" parent="." instance=ExtResource("3_5fvtf")]
 position = Vector2(640, 630)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="left_edge" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 360)
+shape = SubResource("RectangleShape2D_k45yj")
+
+[node name="right_edge" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1280, 360)
+shape = SubResource("RectangleShape2D_k45yj")
+
+[node name="wall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(635, 85)
+shape = SubResource("RectangleShape2D_pv4wu")
+
+[node name="bottom" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(640, 730)
+shape = SubResource("RectangleShape2D_v18ic")
