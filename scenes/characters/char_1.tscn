@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bj5svrmek3bws"]
 
 [ext_resource type="Texture2D" uid="uid://cjaq4vg860b4v" path="res://sprites/char_1_ver_2.png" id="1_236t4"]
-[ext_resource type="Script" path="res://scripts/animations/char_1.tscn.gd" id="1_biv15"]
+[ext_resource type="Script" path="res://scripts/char_1.gd" id="1_o8cs5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vj08"]
 size = Vector2(60, 29)
@@ -158,12 +158,12 @@ _data = {
 "walk_up": SubResource("Animation_qpvh2")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0mj0j"]
-radius = 66.3099
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mn03v"]
+size = Vector2(82, 81.5)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
-script = ExtResource("1_biv15")
+script = ExtResource("1_o8cs5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
 position = Vector2(2.08165e-12, -40)
@@ -190,5 +190,5 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/InteractionFinder"]
-position = Vector2(-8.71968e-15, -89)
-shape = SubResource("CircleShape2D_0mj0j")
+position = Vector2(7.62939e-06, -53.75)
+shape = SubResource("RectangleShape2D_mn03v")

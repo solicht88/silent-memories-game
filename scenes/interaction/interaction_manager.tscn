@@ -5,9 +5,3 @@
 [node name="InteractionManager" type="Node2D"]
 z_index = 1
 script = ExtResource("1_2tiyc")
-
-[node name="Label" type="Label" parent="."]
-z_index = 10
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Interact"

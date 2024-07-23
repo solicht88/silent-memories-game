@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjdlcve4afs7j"
-path="res://.godot/imported/calm_room_base.png-b44e35705dfc84b899dce2fc1bc8299d.ctex"
+uid="uid://btp71ao5g2c0p"
+path="res://.godot/imported/calm_room_furniture.png-510d8a0b2567d3a5134a88ebc8b93580.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilesets/daycare/calm_room_base.png"
-dest_files=["res://.godot/imported/calm_room_base.png-b44e35705dfc84b899dce2fc1bc8299d.ctex"]
+source_file="res://tilesets/daycare/calm_room_furniture.png"
+dest_files=["res://.godot/imported/calm_room_furniture.png-510d8a0b2567d3a5134a88ebc8b93580.ctex"]
 
 [params]
 
