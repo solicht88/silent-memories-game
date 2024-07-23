@@ -162,6 +162,8 @@ _data = {
 size = Vector2(82, 81.5)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
+z_index = 1
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_o8cs5")
 

@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=13 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
 [ext_resource type="Texture2D" uid="uid://gh1w7ff7malh" path="res://tilesets/daycare/playroom_furniture.png" id="2_cf08f"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="3_5fvtf"]
+[ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="4_ebl86"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/calm_door.gd" id="5_e2107"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrlje"]
 texture = ExtResource("1_h7f11")
@@ -716,8 +718,6 @@ layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(393229, 720897, 5, 393218, 1, 5, 196613, 262145, 2, 196618, 655361, 2, 196620, 786433, 2, 196615, 393217, 2, 196611, 196609, 3)
 
 [node name="player" parent="." instance=ExtResource("3_5fvtf")]
-z_index = 1
-y_sort_enabled = true
 position = Vector2(640, 630)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -745,3 +745,7 @@ shape = SubResource("RectangleShape2D_oyuli")
 [node name="bottom" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(640, 730)
 shape = SubResource("RectangleShape2D_piyna")
+
+[node name="calm_door" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(0, 145)
+script = ExtResource("5_e2107")
