@@ -6,6 +6,7 @@
 radius = 46.1411
 
 [node name="Node2D" type="Node2D"]
+z_index = 1
 
 [node name="InteractionArea" parent="." instance=ExtResource("1_hsken")]
 

@@ -673,6 +673,5 @@ position = Vector2(200, 80)
 shape = SubResource("RectangleShape2D_2uggs")
 
 [node name="book" parent="." instance=ExtResource("7_72jl3")]
-z_index = 1
 position = Vector2(639, 296)
 script = ExtResource("8_5e7tw")

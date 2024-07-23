@@ -37,5 +37,5 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		var interactions = interaction_finder.get_overlapping_areas()
 		if interactions.size() > 0:
-			interactions[0].action()
+			SceneSwitcher.switch_scene("res://scenes/maps/daycare/playroom.tscn")
 			return

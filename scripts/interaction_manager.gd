@@ -18,6 +18,11 @@ func _process(_delta):
 	if active_areas.size() > 0 && can_interact:
 		#active_areas.sort_custom(_sort_by_distance_to_player)
 		label.global_position = active_areas[0].global_position
+		label.global_position.y -= 60
+		label.global_position.x -= label.size.x / 2
+		label.show()
+	else:
+		label.hide()
 
 '''
 func _sort_by_distance_to_player(area1, area2):
@@ -30,6 +35,7 @@ func _input(event):
 	if event.is_action_pressed("interact") && can_interact:
 		if active_areas.size() > 0:
 			can_interact = false
+			label.hide()
 			
 			await active_areas[0].interact.call()
 			
