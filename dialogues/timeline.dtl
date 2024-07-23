@@ -1,0 +1,14 @@
+character: yo
+label go back
+character: what's up?
+[text_input var="testing.response"]
+if {testing.response} == "...":
+	character: uhh.. ok...
+	[wait time="3.0"]
+	jump go back
+if {testing.response} == "making a sandwich":
+	character: delicious!
+	- yes
+		character: hope you enjoy it!
+	- no
+		character: try putting mayo on it!

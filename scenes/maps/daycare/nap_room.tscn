@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3w70hgos7mjm"]
+[gd_scene load_steps=14 format=3 uid="uid://c3w70hgos7mjm"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_2fmp8"]
 [ext_resource type="Texture2D" uid="uid://cuu1hlj7v77gl" path="res://tilesets/daycare/nap_room_furniture.png" id="2_4mtr4"]
 [ext_resource type="Texture2D" uid="uid://cdopi6lj5nnm" path="res://tilesets/daycare/nap_room_lighting.png" id="3_cci7s"]
+[ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="4_u7klm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lirjw"]
 texture = ExtResource("1_2fmp8")
@@ -612,7 +613,7 @@ texture_region_size = Vector2i(80, 80)
 1:2/0 = 0
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-439.113, -118.087, 439.113, -118.087, 439.113, 139.3, -437.699, 140.714)
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-434.871, -118.087, 443.356, -118.087, 441.942, 137.886, -436.285, 136.472)
 15:4/0 = 0
 15:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:4/0/physics_layer_0/angular_velocity = 0.0
@@ -620,6 +621,7 @@ texture_region_size = Vector2i(80, 80)
 12:1/0 = 0
 12:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:1/0/physics_layer_0/angular_velocity = 0.0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-130.284, -39.598, 120.385, -39.598, 120.031, 123.037, -129.931, 123.39)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5bmle"]
 texture = ExtResource("3_cci7s")
@@ -1064,6 +1066,21 @@ sources/0 = SubResource("TileSetAtlasSource_lirjw")
 sources/1 = SubResource("TileSetAtlasSource_wpq0b")
 sources/2 = SubResource("TileSetAtlasSource_5bmle")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0q7lj"]
+size = Vector2(20, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jei4v"]
+size = Vector2(1290, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrcqw"]
+size = Vector2(1280, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyhvl"]
+size = Vector2(89, 492)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibqbf"]
+size = Vector2(90, 116)
+
 [node name="nap_room" type="Node2D"]
 y_sort_enabled = true
 
@@ -1082,3 +1099,32 @@ layer_2/tile_data = PackedInt32Array()
 layer_3/name = "lighting"
 layer_3/z_index = 2
 layer_3/tile_data = PackedInt32Array(0, 2, 0, 65536, 2, 1, 131072, 2, 2, 196608, 2, 3, 262144, 2, 4, 327680, 2, 5, 393216, 2, 6, 458752, 2, 7, 524288, 2, 8, 1, 65538, 0, 65537, 65538, 1, 131073, 65538, 2, 196609, 65538, 3, 262145, 65538, 4, 327681, 65538, 5, 393217, 65538, 6, 458753, 65538, 7, 524289, 65538, 8, 2, 131074, 0, 65538, 131074, 1, 131074, 131074, 2, 196610, 131074, 3, 262146, 131074, 4, 327682, 131074, 5, 393218, 131074, 6, 458754, 131074, 7, 524290, 131074, 8, 3, 196610, 0, 65539, 196610, 1, 131075, 196610, 2, 196611, 196610, 3, 262147, 196610, 4, 327683, 196610, 5, 393219, 196610, 6, 458755, 196610, 7, 524291, 196610, 8, 4, 262146, 0, 65540, 262146, 1, 131076, 262146, 2, 196612, 262146, 3, 262148, 262146, 4, 327684, 262146, 5, 393220, 262146, 6, 458756, 262146, 7, 524292, 262146, 8, 5, 327682, 0, 65541, 327682, 1, 131077, 327682, 2, 196613, 327682, 3, 262149, 327682, 4, 327685, 327682, 5, 393221, 327682, 6, 458757, 327682, 7, 524293, 327682, 8, 6, 393218, 0, 65542, 393218, 1, 131078, 393218, 2, 196614, 393218, 3, 262150, 393218, 4, 327686, 393218, 5, 393222, 393218, 6, 458758, 393218, 7, 524294, 393218, 8, 7, 458754, 0, 65543, 458754, 1, 131079, 458754, 2, 196615, 458754, 3, 262151, 458754, 4, 327687, 458754, 5, 393223, 458754, 6, 458759, 458754, 7, 524295, 458754, 8, 8, 524290, 0, 65544, 524290, 1, 131080, 524290, 2, 196616, 524290, 3, 262152, 524290, 4, 327688, 524290, 5, 393224, 524290, 6, 458760, 524290, 7, 524296, 524290, 8, 9, 589826, 0, 65545, 589826, 1, 131081, 589826, 2, 196617, 589826, 3, 262153, 589826, 4, 327689, 589826, 5, 393225, 589826, 6, 458761, 589826, 7, 524297, 589826, 8, 10, 655362, 0, 65546, 655362, 1, 131082, 655362, 2, 196618, 655362, 3, 262154, 655362, 4, 327690, 655362, 5, 393226, 655362, 6, 458762, 655362, 7, 524298, 655362, 8, 11, 720898, 0, 65547, 720898, 1, 131083, 720898, 2, 196619, 720898, 3, 262155, 720898, 4, 327691, 720898, 5, 393227, 720898, 6, 458763, 720898, 7, 524299, 720898, 8, 12, 786434, 0, 65548, 786434, 1, 131084, 786434, 2, 196620, 786434, 3, 262156, 786434, 4, 327692, 786434, 5, 393228, 786434, 6, 458764, 786434, 7, 524300, 786434, 8, 13, 851970, 0, 65549, 851970, 1, 131085, 851970, 2, 196621, 851970, 3, 262157, 851970, 4, 327693, 851970, 5, 393229, 851970, 6, 458765, 851970, 7, 524301, 851970, 8, 14, 917506, 0, 65550, 917506, 1, 131086, 917506, 2, 196622, 917506, 3, 262158, 917506, 4, 327694, 917506, 5, 393230, 917506, 6, 458766, 917506, 7, 524302, 917506, 8, 15, 983042, 0, 65551, 917506, 5, 131087, 917506, 5, 196623, 983042, 3, 262159, 983042, 4, 327695, 983042, 5, 393231, 983042, 6, 458767, 983042, 7, 524303, 983042, 8)
+
+[node name="player" parent="." instance=ExtResource("4_u7klm")]
+position = Vector2(50, 480)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="left_edge" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 360)
+shape = SubResource("RectangleShape2D_0q7lj")
+
+[node name="right_edge" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1200, 360)
+shape = SubResource("RectangleShape2D_0q7lj")
+
+[node name="wall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(635, 165)
+shape = SubResource("RectangleShape2D_jei4v")
+
+[node name="bottom" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(640, 641)
+shape = SubResource("RectangleShape2D_nrcqw")
+
+[node name="left1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(44.5, 246)
+shape = SubResource("RectangleShape2D_lyhvl")
+
+[node name="left2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(45, 622)
+shape = SubResource("RectangleShape2D_ibqbf")
