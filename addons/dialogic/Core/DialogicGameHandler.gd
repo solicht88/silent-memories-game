@@ -95,17 +95,11 @@ signal text_signal(argument: String)
 # Careful, this section is repopulated automatically at certain moments.
 #region SUBSYSTEMS
 
-var Audio := preload("res://addons/dialogic/Modules/Audio/subsystem_audio.gd").new():
-	get: return get_subsystem("Audio")
-
 var Backgrounds := preload("res://addons/dialogic/Modules/Background/subsystem_backgrounds.gd").new():
 	get: return get_subsystem("Backgrounds")
 
-var Portraits := preload("res://addons/dialogic/Modules/Character/subsystem_portraits.gd").new():
-	get: return get_subsystem("Portraits")
-
-var Choices := preload("res://addons/dialogic/Modules/Choice/subsystem_choices.gd").new():
-	get: return get_subsystem("Choices")
+var Settings := preload("res://addons/dialogic/Modules/Settings/subsystem_settings.gd").new():
+	get: return get_subsystem("Settings")
 
 var Expressions := preload("res://addons/dialogic/Modules/Core/subsystem_expression.gd").new():
 	get: return get_subsystem("Expressions")
@@ -116,35 +110,41 @@ var Animations := preload("res://addons/dialogic/Modules/Core/subsystem_animatio
 var Inputs := preload("res://addons/dialogic/Modules/Core/subsystem_input.gd").new():
 	get: return get_subsystem("Inputs")
 
-var Glossary := preload("res://addons/dialogic/Modules/Glossary/subsystem_glossary.gd").new():
-	get: return get_subsystem("Glossary")
+var VAR := preload("res://addons/dialogic/Modules/Variable/subsystem_variables.gd").new():
+	get: return get_subsystem("VAR")
 
-var History := preload("res://addons/dialogic/Modules/History/subsystem_history.gd").new():
-	get: return get_subsystem("History")
-
-var Jump := preload("res://addons/dialogic/Modules/Jump/subsystem_jump.gd").new():
-	get: return get_subsystem("Jump")
-
-var Save := preload("res://addons/dialogic/Modules/Save/subsystem_save.gd").new():
-	get: return get_subsystem("Save")
-
-var Settings := preload("res://addons/dialogic/Modules/Settings/subsystem_settings.gd").new():
-	get: return get_subsystem("Settings")
-
-var Styles := preload("res://addons/dialogic/Modules/Style/subsystem_styles.gd").new():
-	get: return get_subsystem("Styles")
-
-var Text := preload("res://addons/dialogic/Modules/Text/subsystem_text.gd").new():
-	get: return get_subsystem("Text")
+var Portraits := preload("res://addons/dialogic/Modules/Character/subsystem_portraits.gd").new():
+	get: return get_subsystem("Portraits")
 
 var TextInput := preload("res://addons/dialogic/Modules/TextInput/subsystem_text_input.gd").new():
 	get: return get_subsystem("TextInput")
 
-var VAR := preload("res://addons/dialogic/Modules/Variable/subsystem_variables.gd").new():
-	get: return get_subsystem("VAR")
+var Choices := preload("res://addons/dialogic/Modules/Choice/subsystem_choices.gd").new():
+	get: return get_subsystem("Choices")
+
+var Styles := preload("res://addons/dialogic/Modules/Style/subsystem_styles.gd").new():
+	get: return get_subsystem("Styles")
+
+var Jump := preload("res://addons/dialogic/Modules/Jump/subsystem_jump.gd").new():
+	get: return get_subsystem("Jump")
+
+var Audio := preload("res://addons/dialogic/Modules/Audio/subsystem_audio.gd").new():
+	get: return get_subsystem("Audio")
 
 var Voice := preload("res://addons/dialogic/Modules/Voice/subsystem_voice.gd").new():
 	get: return get_subsystem("Voice")
+
+var History := preload("res://addons/dialogic/Modules/History/subsystem_history.gd").new():
+	get: return get_subsystem("History")
+
+var Glossary := preload("res://addons/dialogic/Modules/Glossary/subsystem_glossary.gd").new():
+	get: return get_subsystem("Glossary")
+
+var Text := preload("res://addons/dialogic/Modules/Text/subsystem_text.gd").new():
+	get: return get_subsystem("Text")
+
+var Save := preload("res://addons/dialogic/Modules/Save/subsystem_save.gd").new():
+	get: return get_subsystem("Save")
 
 #endregion
 
