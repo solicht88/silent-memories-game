@@ -1,13 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://cq304oojpibow"]
+[gd_scene load_steps=17 format=3 uid="uid://cq304oojpibow"]
 
-[ext_resource type="Script" path="res://scripts/scenes/daycare/reception.gd" id="1_6lviy"]
+[ext_resource type="Script" path="res://scripts/scenes/reception.gd" id="1_6lviy"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="1_n8fkg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_r3gjr"]
 [ext_resource type="Texture2D" uid="uid://donjoan07hame" path="res://tilesets/daycare/daycare_furniture.png" id="2_omfjg"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="5_6gira"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/playroom_door.gd" id="5_tqjya"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/playroom_door.gd" id="5_tqjya"]
 [ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="7_72jl3"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/book.gd" id="8_5e7tw"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/bathroom_door.gd" id="9_ggl5d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hep1c"]
 texture = ExtResource("1_r3gjr")
@@ -675,3 +676,14 @@ shape = SubResource("RectangleShape2D_2uggs")
 [node name="book" parent="." instance=ExtResource("7_72jl3")]
 position = Vector2(639, 296)
 script = ExtResource("8_5e7tw")
+
+[node name="bathroom_door" type="Node2D" parent="."]
+z_index = 1
+script = ExtResource("9_ggl5d")
+
+[node name="InteractionArea" parent="bathroom_door" instance=ExtResource("5_6gira")]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bathroom_door/InteractionArea"]
+position = Vector2(1001.5, 62.5)
+shape = SubResource("RectangleShape2D_2uggs")

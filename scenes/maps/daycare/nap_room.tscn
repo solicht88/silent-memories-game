@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://c3w70hgos7mjm"]
+[gd_scene load_steps=17 format=3 uid="uid://c3w70hgos7mjm"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_2fmp8"]
 [ext_resource type="Texture2D" uid="uid://cuu1hlj7v77gl" path="res://tilesets/daycare/nap_room_furniture.png" id="2_4mtr4"]
 [ext_resource type="Texture2D" uid="uid://cdopi6lj5nnm" path="res://tilesets/daycare/nap_room_lighting.png" id="3_cci7s"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="4_u7klm"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/playroom_door.gd" id="5_vx8dp"]
+[ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="6_5uql3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lirjw"]
 texture = ExtResource("1_2fmp8")
@@ -621,7 +623,7 @@ texture_region_size = Vector2i(80, 80)
 12:1/0 = 0
 12:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:1/0/physics_layer_0/angular_velocity = 0.0
-12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-130.284, -39.598, 120.385, -39.598, 120.031, 123.037, -129.931, 123.39)
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-124.75, -40.25, 124.628, -39.7747, 124.274, 140.537, -123.213, 140.537)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5bmle"]
 texture = ExtResource("3_cci7s")
@@ -1081,6 +1083,9 @@ size = Vector2(89, 492)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibqbf"]
 size = Vector2(90, 116)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8traa"]
+size = Vector2(21, 45)
+
 [node name="nap_room" type="Node2D"]
 y_sort_enabled = true
 
@@ -1128,3 +1133,14 @@ shape = SubResource("RectangleShape2D_lyhvl")
 [node name="left2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(45, 622)
 shape = SubResource("RectangleShape2D_ibqbf")
+
+[node name="play_door" type="Node2D" parent="."]
+z_index = 1
+script = ExtResource("5_vx8dp")
+
+[node name="InteractionArea" parent="play_door" instance=ExtResource("6_5uql3")]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="play_door/InteractionArea"]
+position = Vector2(0, 465)
+shape = SubResource("RectangleShape2D_8traa")
