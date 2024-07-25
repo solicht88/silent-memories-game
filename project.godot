@@ -28,10 +28,17 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"bathroom_sign": "res://dialogues/daycare/reception/bathroom_sign.dtl",
 "book": "res://dialogues/daycare/reception/book.dtl",
 "cubby": "res://dialogues/daycare/reception/cubby.dtl",
+"dollhouse": "res://dialogues/daycare/playroom/dollhouse.dtl",
 "nameplate": "res://dialogues/daycare/reception/nameplate.dtl",
+"pink_heart": "res://dialogues/daycare/playroom/pink_heart.dtl",
 "plant": "res://dialogues/daycare/reception/plant.dtl",
+"play_sign": "res://dialogues/daycare/reception/play_sign.dtl",
+"playroom/book": "res://dialogues/daycare/playroom/book.dtl",
+"rainbow": "res://dialogues/daycare/reception/rainbow.dtl",
+"succulent": "res://dialogues/daycare/reception/succulent.dtl",
 "timeline": "res://dialogues/timeline.dtl"
 }
 variables={

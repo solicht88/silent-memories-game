@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cq304oojpibow"]
+[gd_scene load_steps=29 format=3 uid="uid://cq304oojpibow"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/reception.gd" id="1_6lviy"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="1_n8fkg"]
@@ -14,6 +14,10 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/plant.gd" id="12_y1nnn"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/cubby.gd" id="13_bbdai"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/nameplate.gd" id="14_43dak"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/rainbow.gd" id="15_akci3"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/succulent.gd" id="16_gh3f3"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/play_sign.gd" id="17_o7bxy"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/bathroom_sign.gd" id="18_lvt72"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hep1c"]
 texture = ExtResource("1_r3gjr")
@@ -632,6 +636,12 @@ size = Vector2(21, 45)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0jygu"]
 size = Vector2(56, 147)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4bs0"]
+size = Vector2(52, 105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyllo"]
+size = Vector2(273, 20)
+
 [node name="reception" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_6lviy")
@@ -723,9 +733,30 @@ script = ExtResource("13_bbdai")
 [node name="InteractionArea" parent="cubby2" instance=ExtResource("5_6gira")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cubby2/InteractionArea"]
-position = Vector2(1251, 346)
-shape = SubResource("RectangleShape2D_0jygu")
+position = Vector2(1253, 325.5)
+shape = SubResource("RectangleShape2D_u4bs0")
 
 [node name="nameplate" parent="." instance=ExtResource("7_72jl3")]
 position = Vector2(759, 302)
 script = ExtResource("14_43dak")
+
+[node name="rainbow" type="Node2D" parent="."]
+script = ExtResource("15_akci3")
+
+[node name="InteractionArea" parent="rainbow" instance=ExtResource("5_6gira")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rainbow/InteractionArea"]
+position = Vector2(635, 95)
+shape = SubResource("RectangleShape2D_kyllo")
+
+[node name="succulent" parent="." instance=ExtResource("7_72jl3")]
+position = Vector2(1244, 414)
+script = ExtResource("16_gh3f3")
+
+[node name="play_sign" parent="." instance=ExtResource("7_72jl3")]
+position = Vector2(277, 84)
+script = ExtResource("17_o7bxy")
+
+[node name="bathroom_sign" parent="." instance=ExtResource("7_72jl3")]
+position = Vector2(1077, 84)
+script = ExtResource("18_lvt72")

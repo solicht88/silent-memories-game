@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=21 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/playroom.gd" id="1_6avgg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
@@ -9,6 +9,9 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/nap_door.gd" id="6_o2o3y"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/reception_door.gd" id="7_i7n0q"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="8_6sj3l"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/dollhouse.gd" id="10_n8bi6"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/book.gd" id="11_gpqa8"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/pink_heart.gd" id="12_8v4mj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrlje"]
 texture = ExtResource("1_h7f11")
@@ -658,7 +661,7 @@ texture_region_size = Vector2i(80, 80)
 11:5/0/physics_layer_0/angular_velocity = 0.0
 11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-159.25, -19, -81.75, -18.5, -82.25, -4.5, 154.25, -4.5, 154.75, 82, -159.25, 81.5)
 3:3/0 = 0
-3:3/0/y_sort_origin = -30
+3:3/0/y_sort_origin = -80
 3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:3/0/physics_layer_0/angular_velocity = 0.0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-30.494, -34.9134, 40, -35.0902, 40, 14.75, -29.7869, 14.9376)
@@ -768,8 +771,19 @@ position = Vector2(0, 88)
 script = ExtResource("7_i7n0q")
 
 [node name="InteractionArea" parent="reception_door" instance=ExtResource("8_6sj3l")]
-collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="reception_door/InteractionArea"]
 position = Vector2(640, 641)
 shape = SubResource("RectangleShape2D_ajcdv")
+
+[node name="dollhouse" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(1001, 282)
+script = ExtResource("10_n8bi6")
+
+[node name="book" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(290, 261)
+script = ExtResource("11_gpqa8")
+
+[node name="pink_heart" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(990, 94)
+script = ExtResource("12_8v4mj")
