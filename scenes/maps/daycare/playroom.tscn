@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://gh1w7ff7malh" path="res://tilesets/daycare/playroom_furniture.png" id="2_cf08f"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="3_5fvtf"]
 [ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="4_ebl86"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/calm_door.gd" id="5_e2107"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/nap_door.gd" id="6_o2o3y"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/reception_door.gd" id="7_i7n0q"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/calm_door.gd" id="5_e2107"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/nap_door.gd" id="6_o2o3y"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception_door.gd" id="7_i7n0q"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="8_6sj3l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrlje"]

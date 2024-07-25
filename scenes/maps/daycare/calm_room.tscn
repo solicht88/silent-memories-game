@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://btp71ao5g2c0p" path="res://tilesets/daycare/calm_room_furniture.png" id="2_6stjg"]
 [ext_resource type="Texture2D" uid="uid://vq2yg2ye1xgk" path="res://tilesets/daycare/calm_room_lighting.png" id="3_tmia0"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="4_21hks"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/playroom_door.gd" id="5_nkbie"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/playroom_door.gd" id="5_nkbie"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="6_mvys6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3ggl"]
@@ -1281,6 +1281,7 @@ shape = SubResource("RectangleShape2D_qywqw")
 
 [node name="play_door" type="Node2D" parent="."]
 z_index = 1
+position = Vector2(21, 0)
 script = ExtResource("5_nkbie")
 
 [node name="InteractionArea" parent="play_door" instance=ExtResource("6_mvys6")]
