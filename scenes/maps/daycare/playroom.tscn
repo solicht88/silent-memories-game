@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=18 format=3 uid="uid://dwcnxm3avdbb7"]
 
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/playroom.gd" id="1_6avgg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
 [ext_resource type="Texture2D" uid="uid://gh1w7ff7malh" path="res://tilesets/daycare/playroom_furniture.png" id="2_cf08f"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="3_5fvtf"]
@@ -709,6 +710,7 @@ size = Vector2(21, 45)
 
 [node name="playroom" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_6avgg")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

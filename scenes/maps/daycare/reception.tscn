@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://cq304oojpibow"]
 
-[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/reception.gd" id="1_6lviy"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/reception.gd" id="1_6lviy"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="1_n8fkg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_r3gjr"]
 [ext_resource type="Texture2D" uid="uid://donjoan07hame" path="res://tilesets/daycare/daycare_furniture.png" id="2_omfjg"]

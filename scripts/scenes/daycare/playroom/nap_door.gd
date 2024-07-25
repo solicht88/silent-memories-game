@@ -1,10 +1,10 @@
 extends Node2D
 
 @onready var interaction_area: InteractionArea = $InteractionArea
+@onready var location = $".."
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
 
 func _on_interact():
-	pass
-	#SceneSwitcher.switch_scene("res://scenes/maps/daycare/nap_room.tscn")
+	SceneSwitcher.switch_scene("res://scenes/maps/daycare/nap_room.tscn", location.nap_room)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://d24s32j0bcyms"]
+[gd_scene load_steps=19 format=3 uid="uid://d24s32j0bcyms"]
 
+[ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/calm_room.gd" id="1_ka2uw"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_oqwhk"]
 [ext_resource type="Texture2D" uid="uid://btp71ao5g2c0p" path="res://tilesets/daycare/calm_room_furniture.png" id="2_6stjg"]
 [ext_resource type="Texture2D" uid="uid://vq2yg2ye1xgk" path="res://tilesets/daycare/calm_room_lighting.png" id="3_tmia0"]
@@ -1233,6 +1234,7 @@ size = Vector2(21, 45)
 
 [node name="calm_room" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_ka2uw")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

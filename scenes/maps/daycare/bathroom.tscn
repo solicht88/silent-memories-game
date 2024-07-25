@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://dw2dxxa0teohn"]
+[gd_scene load_steps=16 format=3 uid="uid://dw2dxxa0teohn"]
 
 [ext_resource type="Texture2D" uid="uid://3e18h4mmn3ww" path="res://tilesets/daycare/bathroom_floor.png" id="1_hkvdn"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/bathroom.gd" id="1_hpvsl"]
 [ext_resource type="Texture2D" uid="uid://b0aai2j376xxe" path="res://tilesets/daycare/bathroom_furniture.png" id="2_gahpv"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="3_4035g"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception_door.gd" id="4_whgi7"]
@@ -835,6 +836,7 @@ size = Vector2(21, 45)
 
 [node name="bathroom" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_hpvsl")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

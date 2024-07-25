@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://c3w70hgos7mjm"]
+[gd_scene load_steps=18 format=3 uid="uid://c3w70hgos7mjm"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_2fmp8"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/nap_room/nap_room.gd" id="1_uk76b"]
 [ext_resource type="Texture2D" uid="uid://cuu1hlj7v77gl" path="res://tilesets/daycare/nap_room_furniture.png" id="2_4mtr4"]
 [ext_resource type="Texture2D" uid="uid://cdopi6lj5nnm" path="res://tilesets/daycare/nap_room_lighting.png" id="3_cci7s"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="4_u7klm"]
@@ -1088,6 +1089,7 @@ size = Vector2(21, 45)
 
 [node name="nap_room" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_uk76b")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

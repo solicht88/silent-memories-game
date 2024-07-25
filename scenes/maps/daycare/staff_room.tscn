@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://dossvb0gvw0xd"]
+[gd_scene load_steps=16 format=3 uid="uid://dossvb0gvw0xd"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_7kgs5"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/staff_room/staff_room.gd" id="1_ew8k4"]
 [ext_resource type="Texture2D" uid="uid://dxyxymsga52n5" path="res://tilesets/daycare/staff_room_furniture.png" id="2_ta7ng"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="3_preds"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception_door.gd" id="4_fetlg"]
@@ -741,6 +742,7 @@ size = Vector2(21, 45)
 
 [node name="staff_room" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_ew8k4")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
