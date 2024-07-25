@@ -29,6 +29,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "book": "res://dialogues/daycare/reception/book.dtl",
+"cubby": "res://dialogues/daycare/reception/cubby.dtl",
+"nameplate": "res://dialogues/daycare/reception/nameplate.dtl",
 "plant": "res://dialogues/daycare/reception/plant.dtl",
 "timeline": "res://dialogues/timeline.dtl"
 }

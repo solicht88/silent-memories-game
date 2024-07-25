@@ -37,7 +37,8 @@ func _process(_delta):
 			_animation_player.stop()
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("interact") && InteractionManager.can_interact:
+		_animation_player.stop()
 		var interactions = interaction_finder.get_overlapping_areas()
 		#print(interactions)
 		if interactions.size() > 0:

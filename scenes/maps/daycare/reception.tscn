@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cq304oojpibow"]
+[gd_scene load_steps=23 format=3 uid="uid://cq304oojpibow"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/reception.gd" id="1_6lviy"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="1_n8fkg"]
@@ -11,6 +11,9 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/bathroom_door.gd" id="9_ggl5d"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/staff_door.gd" id="10_0246s"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/kitchen_door.gd" id="11_0xca7"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/plant.gd" id="12_y1nnn"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/cubby.gd" id="13_bbdai"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/nameplate.gd" id="14_43dak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hep1c"]
 texture = ExtResource("1_r3gjr")
@@ -585,7 +588,7 @@ texture_region_size = Vector2i(80, 80)
 15:8/0/physics_layer_0/angular_velocity = 0.0
 4:3/size_in_atlas = Vector2i(1, 2)
 4:3/0 = 0
-4:3/0/y_sort_origin = 24
+4:3/0/y_sort_origin = -20
 4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:3/0/physics_layer_0/angular_velocity = 0.0
 4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40.1283, 66.2913, 38.007, 66.2913, 38.7141, 80.787, -39.7748, 79.7263)
@@ -625,6 +628,9 @@ size = Vector2(1280, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2uggs"]
 size = Vector2(21, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jygu"]
+size = Vector2(56, 147)
 
 [node name="reception" type="Node2D"]
 y_sort_enabled = true
@@ -669,14 +675,13 @@ z_index = 1
 script = ExtResource("5_tqjya")
 
 [node name="InteractionArea" parent="play_door" instance=ExtResource("5_6gira")]
-collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="play_door/InteractionArea"]
 position = Vector2(201.5, 62.5)
 shape = SubResource("RectangleShape2D_2uggs")
 
 [node name="book" parent="." instance=ExtResource("7_72jl3")]
-position = Vector2(639, 296)
+position = Vector2(639, 288)
 script = ExtResource("8_5e7tw")
 
 [node name="bathroom_door" type="Node2D" parent="."]
@@ -684,7 +689,6 @@ z_index = 1
 script = ExtResource("9_ggl5d")
 
 [node name="InteractionArea" parent="bathroom_door" instance=ExtResource("5_6gira")]
-collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bathroom_door/InteractionArea"]
 position = Vector2(1001.5, 62.5)
@@ -697,3 +701,31 @@ script = ExtResource("10_0246s")
 [node name="kitchen_door" parent="." instance=ExtResource("7_72jl3")]
 position = Vector2(1337, 648)
 script = ExtResource("11_0xca7")
+
+[node name="plant" parent="." instance=ExtResource("7_72jl3")]
+position = Vector2(360, 304)
+script = ExtResource("12_y1nnn")
+
+[node name="cubby1" type="Node2D" parent="."]
+z_index = 1
+script = ExtResource("13_bbdai")
+
+[node name="InteractionArea" parent="cubby1" instance=ExtResource("5_6gira")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cubby1/InteractionArea"]
+position = Vector2(20, 343.5)
+shape = SubResource("RectangleShape2D_0jygu")
+
+[node name="cubby2" type="Node2D" parent="."]
+z_index = 1
+script = ExtResource("13_bbdai")
+
+[node name="InteractionArea" parent="cubby2" instance=ExtResource("5_6gira")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cubby2/InteractionArea"]
+position = Vector2(1251, 346)
+shape = SubResource("RectangleShape2D_0jygu")
+
+[node name="nameplate" parent="." instance=ExtResource("7_72jl3")]
+position = Vector2(759, 302)
+script = ExtResource("14_43dak")

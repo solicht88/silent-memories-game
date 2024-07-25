@@ -1287,7 +1287,6 @@ position = Vector2(21, 0)
 script = ExtResource("5_nkbie")
 
 [node name="InteractionArea" parent="play_door" instance=ExtResource("6_mvys6")]
-collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="play_door/InteractionArea"]
 position = Vector2(1280, 452)
