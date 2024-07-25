@@ -1,15 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://cq304oojpibow"]
+[gd_scene load_steps=19 format=3 uid="uid://cq304oojpibow"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/reception.gd" id="1_6lviy"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="1_n8fkg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_r3gjr"]
 [ext_resource type="Texture2D" uid="uid://donjoan07hame" path="res://tilesets/daycare/daycare_furniture.png" id="2_omfjg"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="5_6gira"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/playroom_door.gd" id="5_tqjya"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/playroom_door.gd" id="5_tqjya"]
 [ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="7_72jl3"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/book.gd" id="8_5e7tw"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/bathroom_door.gd" id="9_ggl5d"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/staff_door.gd" id="10_0246s"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/bathroom_door.gd" id="9_ggl5d"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/staff_door.gd" id="10_0246s"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/kitchen_door.gd" id="11_0xca7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hep1c"]
 texture = ExtResource("1_r3gjr")
@@ -692,3 +693,7 @@ shape = SubResource("RectangleShape2D_2uggs")
 [node name="staff_door" parent="." instance=ExtResource("7_72jl3")]
 position = Vector2(-57, 648)
 script = ExtResource("10_0246s")
+
+[node name="kitchen_door" parent="." instance=ExtResource("7_72jl3")]
+position = Vector2(1337, 648)
+script = ExtResource("11_0xca7")

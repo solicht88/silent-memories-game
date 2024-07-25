@@ -1,6 +1,6 @@
 extends Node2D
 
-var reception = Vector2(40, 620)
+var reception = Vector2(1220, 620)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

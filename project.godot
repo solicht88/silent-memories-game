@@ -28,7 +28,8 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"reception_book": "res://dialogues/daycare/reception_book.dtl",
+"book": "res://dialogues/daycare/reception/book.dtl",
+"plant": "res://dialogues/daycare/reception/plant.dtl",
 "timeline": "res://dialogues/timeline.dtl"
 }
 variables={

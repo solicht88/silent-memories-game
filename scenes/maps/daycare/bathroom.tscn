@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/bathroom.gd" id="1_hpvsl"]
 [ext_resource type="Texture2D" uid="uid://b0aai2j376xxe" path="res://tilesets/daycare/bathroom_furniture.png" id="2_gahpv"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="3_4035g"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/reception_door.gd" id="4_whgi7"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/reception_door.gd" id="4_whgi7"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="5_xr1r4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_052x1"]

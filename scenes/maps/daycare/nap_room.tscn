@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cuu1hlj7v77gl" path="res://tilesets/daycare/nap_room_furniture.png" id="2_4mtr4"]
 [ext_resource type="Texture2D" uid="uid://cdopi6lj5nnm" path="res://tilesets/daycare/nap_room_lighting.png" id="3_cci7s"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="4_u7klm"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/playroom_door.gd" id="5_vx8dp"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/doors/playroom_door.gd" id="5_vx8dp"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="6_5uql3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lirjw"]

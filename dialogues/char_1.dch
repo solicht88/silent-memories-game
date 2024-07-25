@@ -17,7 +17,7 @@
 "portraits": {
 "Neutral": {
 "export_overrides": {
-"image": "\"res://sprites/char_1_portraits/char_1_portrait.png\""
+"image": "\"res://sprites/char_1_portraits/char_1_portraits_2.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

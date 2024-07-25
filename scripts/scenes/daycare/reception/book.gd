@@ -8,9 +8,11 @@ func _ready():
 
 func _on_interact():
 	player.can_move = false
-	Dialogic.start("reception_book")
+	InteractionManager.can_interact = false
+	Dialogic.start("book")
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 	player.can_move = true
+	InteractionManager.can_interact = true
