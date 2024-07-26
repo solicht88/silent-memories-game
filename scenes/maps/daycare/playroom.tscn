@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=37 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/playroom.gd" id="1_6avgg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/pink_chest.gd" id="22_2m2cr"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/table1.gd" id="23_i3ew7"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/table2.gd" id="24_p304b"]
+[ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="25_bnfu2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrlje"]
 texture = ExtResource("1_h7f11")
@@ -896,3 +897,5 @@ script = ExtResource("24_p304b")
 z_index = 1
 position = Vector2(200, 525)
 shape = SubResource("RectangleShape2D_4xs6s")
+
+[node name="Transition" parent="." instance=ExtResource("25_bnfu2")]
