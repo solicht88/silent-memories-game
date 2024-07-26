@@ -29,16 +29,24 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "bathroom_sign": "res://dialogues/daycare/reception/bathroom_sign.dtl",
+"blocks": "res://dialogues/daycare/playroom/blocks.dtl",
 "book": "res://dialogues/daycare/reception/book.dtl",
+"calm_sign": "res://dialogues/daycare/playroom/calm_sign.dtl",
 "cubby": "res://dialogues/daycare/reception/cubby.dtl",
 "dollhouse": "res://dialogues/daycare/playroom/dollhouse.dtl",
+"faces": "res://dialogues/daycare/playroom/faces.dtl",
 "nameplate": "res://dialogues/daycare/reception/nameplate.dtl",
+"nap_sign": "res://dialogues/daycare/playroom/nap_sign.dtl",
 "pink_heart": "res://dialogues/daycare/playroom/pink_heart.dtl",
 "plant": "res://dialogues/daycare/reception/plant.dtl",
 "play_sign": "res://dialogues/daycare/reception/play_sign.dtl",
 "playroom/book": "res://dialogues/daycare/playroom/book.dtl",
+"purple_heart": "res://dialogues/daycare/playroom/purple_heart.dtl",
 "rainbow": "res://dialogues/daycare/reception/rainbow.dtl",
+"red_heart": "res://dialogues/daycare/playroom/red_heart.dtl",
+"stickmen": "res://dialogues/daycare/playroom/stickmen.dtl",
 "succulent": "res://dialogues/daycare/reception/succulent.dtl",
+"suns": "res://dialogues/daycare/playroom/suns.dtl",
 "timeline": "res://dialogues/timeline.dtl"
 }
 variables={

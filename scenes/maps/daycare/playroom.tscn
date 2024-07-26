@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=31 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/playroom.gd" id="1_6avgg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
@@ -12,6 +12,14 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/dollhouse.gd" id="10_n8bi6"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/book.gd" id="11_gpqa8"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/pink_heart.gd" id="12_8v4mj"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/red_heart.gd" id="13_p4st2"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/purple_heart.gd" id="14_ch5mk"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/suns.gd" id="14_y8nh3"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/stickmen.gd" id="16_3k5nc"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/faces.gd" id="17_klrwr"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/calm_sign.gd" id="18_tsrk1"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/nap_sign.gd" id="19_7reex"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/blocks.gd" id="20_1ccr6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrlje"]
 texture = ExtResource("1_h7f11")
@@ -711,6 +719,12 @@ size = Vector2(1280, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajcdv"]
 size = Vector2(21, 45)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5abba"]
+radius = 26.8328
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1v5o0"]
+radius = 25.0599
+
 [node name="playroom" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_6avgg")
@@ -787,3 +801,62 @@ script = ExtResource("11_gpqa8")
 [node name="pink_heart" parent="." instance=ExtResource("4_ebl86")]
 position = Vector2(990, 94)
 script = ExtResource("12_8v4mj")
+
+[node name="red_heart" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(170, 95)
+script = ExtResource("13_p4st2")
+
+[node name="purple_heart" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(655, 108)
+script = ExtResource("14_ch5mk")
+
+[node name="suns" type="Node2D" parent="."]
+script = ExtResource("14_y8nh3")
+
+[node name="InteractionArea" parent="suns" instance=ExtResource("8_6sj3l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suns/InteractionArea"]
+position = Vector2(1115, 88)
+shape = SubResource("CircleShape2D_5abba")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="suns/InteractionArea"]
+position = Vector2(279, 104)
+shape = SubResource("CircleShape2D_1v5o0")
+
+[node name="stickmen" type="Node2D" parent="."]
+script = ExtResource("16_3k5nc")
+
+[node name="InteractionArea" parent="stickmen" instance=ExtResource("8_6sj3l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stickmen/InteractionArea"]
+position = Vector2(423, 92)
+shape = SubResource("CircleShape2D_5abba")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stickmen/InteractionArea"]
+position = Vector2(864, 103)
+shape = SubResource("CircleShape2D_5abba")
+
+[node name="faces" type="Node2D" parent="."]
+script = ExtResource("17_klrwr")
+
+[node name="InteractionArea" parent="faces" instance=ExtResource("8_6sj3l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="faces/InteractionArea"]
+position = Vector2(560, 92)
+shape = SubResource("CircleShape2D_5abba")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="faces/InteractionArea"]
+position = Vector2(765, 87)
+shape = SubResource("CircleShape2D_5abba")
+
+[node name="calm_sign" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(57, 90)
+script = ExtResource("18_tsrk1")
+
+[node name="nap_sign" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(1223, 89)
+script = ExtResource("19_7reex")
+
+[node name="blocks" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(587, 287)
+script = ExtResource("20_1ccr6")

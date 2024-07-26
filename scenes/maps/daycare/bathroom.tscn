@@ -885,7 +885,6 @@ z_index = 1
 script = ExtResource("4_whgi7")
 
 [node name="InteractionArea" parent="reception_door" instance=ExtResource("5_xr1r4")]
-collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="reception_door/InteractionArea"]
 position = Vector2(640, 641)

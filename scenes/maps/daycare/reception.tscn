@@ -754,9 +754,9 @@ position = Vector2(1244, 414)
 script = ExtResource("16_gh3f3")
 
 [node name="play_sign" parent="." instance=ExtResource("7_72jl3")]
-position = Vector2(277, 84)
+position = Vector2(285, 84)
 script = ExtResource("17_o7bxy")
 
 [node name="bathroom_sign" parent="." instance=ExtResource("7_72jl3")]
-position = Vector2(1077, 84)
+position = Vector2(1085, 84)
 script = ExtResource("18_lvt72")
