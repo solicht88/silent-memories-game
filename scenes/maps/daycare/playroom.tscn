@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=36 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/playroom.gd" id="1_6avgg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
@@ -20,6 +20,10 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/calm_sign.gd" id="18_tsrk1"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/nap_sign.gd" id="19_7reex"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/blocks.gd" id="20_1ccr6"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/blue_chest.gd" id="21_yifas"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/pink_chest.gd" id="22_2m2cr"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/table1.gd" id="23_i3ew7"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/table2.gd" id="24_p304b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrlje"]
 texture = ExtResource("1_h7f11")
@@ -725,6 +729,9 @@ radius = 26.8328
 [sub_resource type="CircleShape2D" id="CircleShape2D_1v5o0"]
 radius = 25.0599
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xs6s"]
+size = Vector2(238.5, 61)
+
 [node name="playroom" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_6avgg")
@@ -860,3 +867,32 @@ script = ExtResource("19_7reex")
 [node name="blocks" parent="." instance=ExtResource("4_ebl86")]
 position = Vector2(587, 287)
 script = ExtResource("20_1ccr6")
+
+[node name="blue_chest" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(440, 248)
+script = ExtResource("21_yifas")
+
+[node name="pink_chest" parent="." instance=ExtResource("4_ebl86")]
+position = Vector2(840, 248)
+script = ExtResource("22_2m2cr")
+
+[node name="table1" type="Node2D" parent="."]
+script = ExtResource("23_i3ew7")
+
+[node name="InteractionArea" parent="table1" instance=ExtResource("8_6sj3l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table1/InteractionArea"]
+z_index = 1
+position = Vector2(200, 525)
+shape = SubResource("RectangleShape2D_4xs6s")
+
+[node name="table2" type="Node2D" parent="."]
+position = Vector2(880, 0)
+script = ExtResource("24_p304b")
+
+[node name="InteractionArea" parent="table2" instance=ExtResource("8_6sj3l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table2/InteractionArea"]
+z_index = 1
+position = Vector2(200, 525)
+shape = SubResource("RectangleShape2D_4xs6s")

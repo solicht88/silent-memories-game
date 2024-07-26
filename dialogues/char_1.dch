@@ -17,7 +17,25 @@
 "portraits": {
 "Neutral": {
 "export_overrides": {
-"image": "\"res://sprites/char_1_portraits/char_1_portraits_2.png\""
+"image": "\"res://sprites/char_1_portraits/char_1_portraits_2_v2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Pensive": {
+"export_overrides": {
+"image": "\"res://sprites/char_1_portraits/char_1_portraits_2_pensive.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Worry": {
+"export_overrides": {
+"image": "\"res://sprites/char_1_portraits/char_1_portraits_2_worry.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
