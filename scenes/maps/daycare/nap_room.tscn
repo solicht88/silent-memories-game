@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c3w70hgos7mjm"]
+[gd_scene load_steps=21 format=3 uid="uid://c3w70hgos7mjm"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_2fmp8"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/nap_room/nap_room.gd" id="1_uk76b"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/playroom_door.gd" id="5_vx8dp"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="6_5uql3"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="8_rsply"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/nap_room/tableware.gd" id="9_psyhy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lirjw"]
 texture = ExtResource("1_2fmp8")
@@ -1088,6 +1089,9 @@ size = Vector2(90, 116)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8traa"]
 size = Vector2(21, 45)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x47pu"]
+size = Vector2(870, 198.5)
+
 [node name="nap_room" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_uk76b")
@@ -1149,3 +1153,12 @@ position = Vector2(0, 465)
 shape = SubResource("RectangleShape2D_8traa")
 
 [node name="Transition" parent="." instance=ExtResource("8_rsply")]
+
+[node name="sleep_area" type="Node2D" parent="."]
+script = ExtResource("9_psyhy")
+
+[node name="InteractionArea" parent="sleep_area" instance=ExtResource("6_5uql3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sleep_area/InteractionArea"]
+position = Vector2(524, 349.75)
+shape = SubResource("RectangleShape2D_x47pu")

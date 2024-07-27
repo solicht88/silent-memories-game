@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d24s32j0bcyms"]
+[gd_scene load_steps=26 format=3 uid="uid://d24s32j0bcyms"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/calm_room.gd" id="1_ka2uw"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_oqwhk"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/teddy_bear.gd" id="10_y188o"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/mushroom.gd" id="12_fg3vu"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/scribbles.gd" id="12_fr70v"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/yellow_book.gd" id="13_tilb8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3ggl"]
 texture = ExtResource("1_oqwhk")
@@ -1315,5 +1316,7 @@ position = Vector2(1095, 186)
 script = ExtResource("12_fr70v")
 
 [node name="yellow_book" parent="." instance=ExtResource("8_gfshb")]
+position = Vector2(436, 231)
+script = ExtResource("13_tilb8")
 
 [node name="Transition" parent="." instance=ExtResource("8_nefca")]
