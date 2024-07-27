@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://blto1gygpyqjf"]
-
-[ext_resource type="Texture2D" uid="uid://bdr1xaeqgjjjd" path="res://tilesets/cutscenes/title_screen.png" id="1_tjn0x"]
-
-[node name="title" type="Node2D"]
-
-[node name="TitleScreen" type="Sprite2D" parent="."]
-position = Vector2(640, 360)
-texture = ExtResource("1_tjn0x")
