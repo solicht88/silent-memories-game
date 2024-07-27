@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Silent-memories-game"
-run/main_scene="res://scenes/maps/daycare/reception.tscn"
+run/main_scene="res://scenes/title_screen/title_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -44,6 +44,7 @@ directories/dtl_directory={
 "nameplate": "res://dialogues/daycare/reception/nameplate.dtl",
 "nap_sign": "res://dialogues/daycare/playroom/nap_sign.dtl",
 "paper_towels": "res://dialogues/daycare/bathroom/paper_towels.dtl",
+"pink_book": "res://dialogues/daycare/calm_room/pink_book.dtl",
 "pink_chest": "res://dialogues/daycare/playroom/pink_chest.dtl",
 "pink_heart": "res://dialogues/daycare/playroom/pink_heart.dtl",
 "plant": "res://dialogues/daycare/reception/plant.dtl",

@@ -1,13 +1,24 @@
 extends Control
 
+@onready var transition = $Transition
+@onready var can_press = true
+
 func _ready():
-	pass
+	transition.play("fade_out")
 
 func _on_new_game_pressed():
-	SceneSwitcher.switch_scene("res://scenes/maps/daycare/reception.tscn", Vector2(635, 600))
+	if can_press:
+		can_press = false
+		transition.play("fade_in")
+		await get_tree().create_timer(1).timeout
+		SceneSwitcher.switch_scene("res://scenes/maps/daycare/reception.tscn", Vector2(635, 600))
 
 func _on_continue_pressed():
-	pass
+	if can_press:
+		can_press = false
+		pass
 
 func _on_quit_pressed():
-	get_tree().quit()
+	if can_press:
+		can_press = false
+		get_tree().quit()
