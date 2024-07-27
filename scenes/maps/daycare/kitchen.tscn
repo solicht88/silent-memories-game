@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dyb273ym5lqww"]
+[gd_scene load_steps=20 format=3 uid="uid://dyb273ym5lqww"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/kitchen/kitchen.gd" id="1_q28r7"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_x0wnt"]
@@ -6,12 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="3_gj3bs"]
 [ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="4_ma0g4"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/reception_door.gd" id="5_00thi"]
+[ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="7_gmctw"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="7_xrn6d"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/kitchen/fridge.gd" id="8_8buxi"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/kitchen/tableware.gd" id="9_6xosp"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="10_dkxgw"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/kitchen/stove.gd" id="11_3prx0"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/kitchen/table.gd" id="12_w1gca"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_otenl"]
 texture = ExtResource("1_x0wnt")
@@ -871,14 +868,12 @@ shape = SubResource("RectangleShape2D_w4bja")
 position = Vector2(184, 448)
 script = ExtResource("5_00thi")
 
-[node name="Transition" parent="." instance=ExtResource("7_xrn6d")]
-
 [node name="fridge" parent="." instance=ExtResource("4_ma0g4")]
 position = Vector2(441, 311)
-script = ExtResource("8_8buxi")
+script = ExtResource("7_gmctw")
 
 [node name="tableware" type="Node2D" parent="."]
-script = ExtResource("9_6xosp")
+script = ExtResource("7_gmctw")
 
 [node name="InteractionArea" parent="tableware" instance=ExtResource("10_dkxgw")]
 
@@ -892,10 +887,10 @@ shape = SubResource("RectangleShape2D_dh5pt")
 
 [node name="stove" parent="." instance=ExtResource("4_ma0g4")]
 position = Vector2(721, 309)
-script = ExtResource("11_3prx0")
+script = ExtResource("7_gmctw")
 
 [node name="dining_table" type="Node2D" parent="."]
-script = ExtResource("12_w1gca")
+script = ExtResource("7_gmctw")
 
 [node name="InteractionArea" parent="dining_table" instance=ExtResource("10_dkxgw")]
 
@@ -903,3 +898,5 @@ script = ExtResource("12_w1gca")
 z_index = 1
 position = Vector2(800, 476)
 shape = SubResource("RectangleShape2D_q1d51")
+
+[node name="Transition" parent="." instance=ExtResource("7_xrn6d")]

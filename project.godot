@@ -49,7 +49,7 @@ directories/dtl_directory={
 "pink_heart": "res://dialogues/daycare/playroom/pink_heart.dtl",
 "plant": "res://dialogues/daycare/reception/plant.dtl",
 "play_sign": "res://dialogues/daycare/reception/play_sign.dtl",
-"playroom/book": "res://dialogues/daycare/playroom/book.dtl",
+"playroom_book": "res://dialogues/daycare/playroom/playroom_book.dtl",
 "purple_heart": "res://dialogues/daycare/playroom/purple_heart.dtl",
 "rainbow": "res://dialogues/daycare/reception/rainbow.dtl",
 "red_heart": "res://dialogues/daycare/playroom/red_heart.dtl",
@@ -72,6 +72,7 @@ directories/dtl_directory={
 "yellow_book": "res://dialogues/daycare/calm_room/yellow_book.dtl"
 }
 variables={
+"inventory": {},
 "testing": {
 "response": ""
 }

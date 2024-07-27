@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dossvb0gvw0xd"]
+[gd_scene load_steps=21 format=3 uid="uid://dossvb0gvw0xd"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_7kgs5"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/staff_room/staff_room.gd" id="1_ew8k4"]
@@ -8,9 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="5_kuxdt"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="7_wad5l"]
 [ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="8_fortv"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/staff_room/coffee_machine.gd" id="9_1xy5j"]
+[ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="9_6rkyf"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/staff_room/safe.gd" id="9_lec8w"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/staff_room/couch.gd" id="10_n7tuy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yp2tl"]
 texture = ExtResource("1_7kgs5")
@@ -811,10 +810,10 @@ script = ExtResource("9_lec8w")
 
 [node name="coffee_machine" parent="." instance=ExtResource("8_fortv")]
 position = Vector2(780, 213)
-script = ExtResource("9_1xy5j")
+script = ExtResource("9_6rkyf")
 
 [node name="couch" type="Node2D" parent="."]
-script = ExtResource("10_n7tuy")
+script = ExtResource("9_6rkyf")
 
 [node name="InteractionArea" parent="couch" instance=ExtResource("5_kuxdt")]
 

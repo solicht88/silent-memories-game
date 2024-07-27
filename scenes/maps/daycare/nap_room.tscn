@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="4_u7klm"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/playroom_door.gd" id="5_vx8dp"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="6_5uql3"]
+[ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="7_v1p7t"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="8_rsply"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/nap_room/tableware.gd" id="9_psyhy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lirjw"]
 texture = ExtResource("1_2fmp8")
@@ -1152,13 +1152,13 @@ script = ExtResource("5_vx8dp")
 position = Vector2(0, 465)
 shape = SubResource("RectangleShape2D_8traa")
 
-[node name="Transition" parent="." instance=ExtResource("8_rsply")]
-
 [node name="sleep_area" type="Node2D" parent="."]
-script = ExtResource("9_psyhy")
+script = ExtResource("7_v1p7t")
 
 [node name="InteractionArea" parent="sleep_area" instance=ExtResource("6_5uql3")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sleep_area/InteractionArea"]
 position = Vector2(524, 349.75)
 shape = SubResource("RectangleShape2D_x47pu")
+
+[node name="Transition" parent="." instance=ExtResource("8_rsply")]

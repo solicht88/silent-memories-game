@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d24s32j0bcyms"]
+[gd_scene load_steps=23 format=3 uid="uid://d24s32j0bcyms"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/calm_room.gd" id="1_ka2uw"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_oqwhk"]
@@ -10,11 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="8_gfshb"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="8_nefca"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/toy_bin.gd" id="9_xiofu"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/teddy_bear.gd" id="10_y188o"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/mushroom.gd" id="12_fg3vu"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/scribbles.gd" id="12_fr70v"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/yellow_book.gd" id="13_tilb8"]
-[ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/pink_book.gd" id="14_mnoyc"]
+[ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="14_mnoyc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3ggl"]
 texture = ExtResource("1_oqwhk")
@@ -1306,19 +1302,19 @@ script = ExtResource("9_xiofu")
 
 [node name="teddy_bear" parent="." instance=ExtResource("8_gfshb")]
 position = Vector2(117, 228)
-script = ExtResource("10_y188o")
+script = ExtResource("14_mnoyc")
 
 [node name="mushroom" parent="." instance=ExtResource("8_gfshb")]
 position = Vector2(1010, 196)
-script = ExtResource("12_fg3vu")
+script = ExtResource("14_mnoyc")
 
 [node name="scribbles" parent="." instance=ExtResource("8_gfshb")]
 position = Vector2(1095, 186)
-script = ExtResource("12_fr70v")
+script = ExtResource("14_mnoyc")
 
 [node name="yellow_book" parent="." instance=ExtResource("8_gfshb")]
 position = Vector2(436, 231)
-script = ExtResource("13_tilb8")
+script = ExtResource("14_mnoyc")
 
 [node name="pink_book" parent="." instance=ExtResource("8_gfshb")]
 position = Vector2(500, 276)
