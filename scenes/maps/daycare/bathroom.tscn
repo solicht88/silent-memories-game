@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dw2dxxa0teohn"]
+[gd_scene load_steps=22 format=3 uid="uid://dw2dxxa0teohn"]
 
 [ext_resource type="Texture2D" uid="uid://3e18h4mmn3ww" path="res://tilesets/daycare/bathroom_floor.png" id="1_hkvdn"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/bathroom.gd" id="1_hpvsl"]
@@ -7,6 +7,11 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/reception_door.gd" id="4_whgi7"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="5_xr1r4"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="7_f56ks"]
+[ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="8_ud87l"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/toilet.gd" id="9_gquu0"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/washroom_sink.gd" id="10_4nwwm"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/paper_towels.gd" id="11_lsatk"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/washroom_poster.gd" id="12_8ylmr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_052x1"]
 texture = ExtResource("1_hkvdn")
@@ -890,5 +895,21 @@ script = ExtResource("4_whgi7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="reception_door/InteractionArea"]
 position = Vector2(640, 641)
 shape = SubResource("RectangleShape2D_7unan")
+
+[node name="toilet" parent="." instance=ExtResource("8_ud87l")]
+position = Vector2(525, 355)
+script = ExtResource("9_gquu0")
+
+[node name="washroom_sink" parent="." instance=ExtResource("8_ud87l")]
+position = Vector2(720, 317)
+script = ExtResource("10_4nwwm")
+
+[node name="paper_towels" parent="." instance=ExtResource("8_ud87l")]
+position = Vector2(838, 265)
+script = ExtResource("11_lsatk")
+
+[node name="washroom_poster" parent="." instance=ExtResource("8_ud87l")]
+position = Vector2(610, 259)
+script = ExtResource("12_8ylmr")
 
 [node name="Transition" parent="." instance=ExtResource("7_f56ks")]
