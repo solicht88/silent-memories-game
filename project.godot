@@ -36,6 +36,7 @@ directories/dtl_directory={
 "cubby": "res://dialogues/daycare/reception/cubby.dtl",
 "dollhouse": "res://dialogues/daycare/playroom/dollhouse.dtl",
 "faces": "res://dialogues/daycare/playroom/faces.dtl",
+"mushroom": "res://dialogues/daycare/calm_room/mushroom.dtl",
 "nameplate": "res://dialogues/daycare/reception/nameplate.dtl",
 "nap_sign": "res://dialogues/daycare/playroom/nap_sign.dtl",
 "pink_chest": "res://dialogues/daycare/playroom/pink_chest.dtl",
@@ -46,12 +47,16 @@ directories/dtl_directory={
 "purple_heart": "res://dialogues/daycare/playroom/purple_heart.dtl",
 "rainbow": "res://dialogues/daycare/reception/rainbow.dtl",
 "red_heart": "res://dialogues/daycare/playroom/red_heart.dtl",
+"scribbles": "res://dialogues/daycare/calm_room/scribbles.dtl",
 "stickmen": "res://dialogues/daycare/playroom/stickmen.dtl",
 "succulent": "res://dialogues/daycare/reception/succulent.dtl",
 "suns": "res://dialogues/daycare/playroom/suns.dtl",
 "table1": "res://dialogues/daycare/playroom/table1.dtl",
 "table2": "res://dialogues/daycare/playroom/table2.dtl",
-"timeline": "res://dialogues/timeline.dtl"
+"teddy_bear": "res://dialogues/daycare/calm_room/teddy_bear.dtl",
+"timeline": "res://dialogues/timeline.dtl",
+"toy_bin": "res://dialogues/daycare/calm_room/toy_bin.dtl",
+"yellow_book": "res://dialogues/daycare/calm_room/yellow_book.dtl"
 }
 variables={
 "testing": {

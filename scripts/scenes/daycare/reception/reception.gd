@@ -9,6 +9,8 @@ var staff_room = Vector2(1060, 400)
 var kitchen = Vector2(290, 480)
 
 func _ready():
+	player.can_move = false
+	InteractionManager.can_interact = false
 	transition.play("fade_out")
 	await get_tree().create_timer(1).timeout
 	player.can_move = true

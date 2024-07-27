@@ -9,7 +9,8 @@ var nap_room = Vector2(50, 480)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#transition.get_node("ColorRect").color.a = 255
+	player.can_move = false
+	InteractionManager.can_interact = false
 	transition.play("fade_out")
 	await get_tree().create_timer(1).timeout
 	player.can_move = true

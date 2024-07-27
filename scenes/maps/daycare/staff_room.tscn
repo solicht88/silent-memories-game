@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dossvb0gvw0xd"]
+[gd_scene load_steps=17 format=3 uid="uid://dossvb0gvw0xd"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_7kgs5"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/staff_room/staff_room.gd" id="1_ew8k4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="3_preds"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/reception_door.gd" id="4_fetlg"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="5_kuxdt"]
+[ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="7_wad5l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yp2tl"]
 texture = ExtResource("1_7kgs5")
@@ -796,3 +797,5 @@ script = ExtResource("4_fetlg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="reception_door/InteractionArea"]
 position = Vector2(1121, 272)
 shape = SubResource("RectangleShape2D_mj518")
+
+[node name="Transition" parent="." instance=ExtResource("7_wad5l")]
