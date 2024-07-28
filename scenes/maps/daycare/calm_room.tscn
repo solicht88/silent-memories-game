@@ -1326,6 +1326,5 @@ script = ExtResource("14_mnoyc")
 [node name="Transition" parent="." instance=ExtResource("8_nefca")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("12_4q3i0")]

@@ -16,7 +16,3 @@ func _ready():
 	player.can_move = true
 	InteractionManager.can_interact = true
 	inv.can_open = true
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

@@ -9,6 +9,7 @@ func update(slot: InvSlot):
 		label_text.visible = false
 	else:
 		item_visual.visible = true
-		item_visual.texture = slot.item.texture
+		if slot.item != null:
+			item_visual.texture = slot.item.texture
 		label_text.visible = true
 		label_text.text = str(slot.label)

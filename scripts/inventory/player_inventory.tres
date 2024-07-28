@@ -1,12 +1,10 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=12 format=3 uid="uid://btr7bxv8qflbx"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=11 format=3 uid="uid://btr7bxv8qflbx"]
 
 [ext_resource type="Script" path="res://scripts/inventory/inventory.gd" id="2_6eccs"]
 [ext_resource type="Script" path="res://scripts/inventory/inv_slot.gd" id="2_kuyty"]
-[ext_resource type="Resource" uid="uid://dk8dknx0dn6jp" path="res://scripts/inventory/items/placeholder.tres" id="2_mn5fy"]
 
 [sub_resource type="Resource" id="Resource_28a2r"]
 script = ExtResource("2_kuyty")
-item = ExtResource("2_mn5fy")
 label = ""
 
 [sub_resource type="Resource" id="Resource_6e1ji"]
