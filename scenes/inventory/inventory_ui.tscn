@@ -1,22 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://c22v7u06o1j6g"]
+[gd_scene load_steps=6 format=3 uid="uid://c22v7u06o1j6g"]
 
 [ext_resource type="Script" path="res://scripts/inventory/InventoryUI.gd" id="1_edv44"]
+[ext_resource type="Texture2D" uid="uid://c1ttfnhhngeav" path="res://tilesets/assets/menu_bg.png" id="2_4a5jl"]
 [ext_resource type="Texture2D" uid="uid://dgp1551cios0h" path="res://tilesets/assets/inventory.png" id="2_ieqty"]
 [ext_resource type="PackedScene" uid="uid://s43wtmjh6lvw" path="res://scenes/inventory/inv_ui_slot.tscn" id="3_3nuac"]
+[ext_resource type="PackedScene" uid="uid://cwo8b7gnwejb3" path="res://scenes/inventory/inv_ui_detail.tscn" id="4_5pya7"]
 
 [node name="InventoryUI" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1280.0
+offset_bottom = 720.0
 script = ExtResource("1_edv44")
+
+[node name="MenuBg" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_4a5jl")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = 240.0
-offset_top = 320.0
-offset_right = 1040.0
-offset_bottom = 570.0
+offset_left = 235.0
+offset_top = 305.0
+offset_right = 1045.0
+offset_bottom = 575.0
 texture = ExtResource("2_ieqty")
 region_rect = Rect2(240, 320, 800, 250)
 
@@ -27,10 +34,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -397.0
-offset_top = -126.0
-offset_right = 397.0
-offset_bottom = 126.0
+offset_left = -400.0
+offset_top = -125.0
+offset_right = 400.0
+offset_bottom = 127.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 2
@@ -62,8 +69,25 @@ layout_mode = 2
 [node name="NinePatchRect2" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_left = 320.0
-offset_top = 150.0
+offset_top = 135.0
 offset_right = 960.0
-offset_bottom = 280.0
+offset_bottom = 255.0
 texture = ExtResource("2_ieqty")
 region_rect = Rect2(320, 150, 640, 120)
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -60.0
+offset_right = 320.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="inv_ui_detail" parent="NinePatchRect2/GridContainer" instance=ExtResource("4_5pya7")]
+layout_mode = 2

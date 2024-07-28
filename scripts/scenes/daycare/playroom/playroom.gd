@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var transition = $Transition
 @onready var player = $player
-@onready var inv = $"player/InventoryUI"
+@onready var inv = $CanvasLayer/InventoryUI
 
 var reception = Vector2(200, 200)
 var calm_room = Vector2(1220, 480)

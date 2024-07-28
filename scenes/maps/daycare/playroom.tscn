@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=26 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/playroom.gd" id="1_6avgg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/reception_door.gd" id="7_i7n0q"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="8_6sj3l"]
 [ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="10_cq0i3"]
+[ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="14_0fh6h"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/blue_chest.gd" id="21_yifas"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/pink_chest.gd" id="22_2m2cr"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="25_bnfu2"]
@@ -887,3 +888,7 @@ position = Vector2(200, 525)
 shape = SubResource("RectangleShape2D_4xs6s")
 
 [node name="Transition" parent="." instance=ExtResource("25_bnfu2")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("14_0fh6h")]

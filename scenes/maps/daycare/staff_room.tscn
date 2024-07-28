@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dossvb0gvw0xd"]
+[gd_scene load_steps=22 format=3 uid="uid://dossvb0gvw0xd"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_7kgs5"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/staff_room/staff_room.gd" id="1_ew8k4"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="8_fortv"]
 [ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="9_6rkyf"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/staff_room/safe.gd" id="9_lec8w"]
+[ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="11_2sfq4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yp2tl"]
 texture = ExtResource("1_7kgs5")
@@ -823,3 +824,7 @@ position = Vector2(440, 254)
 shape = SubResource("RectangleShape2D_gv3f2")
 
 [node name="Transition" parent="." instance=ExtResource("7_wad5l")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("11_2sfq4")]

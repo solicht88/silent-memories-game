@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dq1jqhn3suj2g" path="res://tilesets/assets/inventory_details.png" id="1_iecw7"]
 
-[node name="Panel" type="Panel"]
+[node name="inv_ui_detail" type="Panel"]
 offset_right = 640.0
-offset_bottom = 160.0
+offset_bottom = 120.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(320, 80)
+position = Vector2(320, 60)
 texture = ExtResource("1_iecw7")

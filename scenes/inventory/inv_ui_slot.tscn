@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://s43wtmjh6lvw"]
+[gd_scene load_steps=3 format=3 uid="uid://s43wtmjh6lvw"]
 
+[ext_resource type="Script" path="res://scripts/inventory/inv_ui_slot.gd" id="1_ubod2"]
 [ext_resource type="Texture2D" uid="uid://bgahick101is1" path="res://tilesets/assets/inventory_slot.png" id="1_y1uxj"]
 
 [node name="inv_UI_slot" type="Panel"]
@@ -7,7 +8,27 @@ self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(395, 60)
 offset_right = 395.0
 offset_bottom = 60.0
+script = ExtResource("1_ubod2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(197.5, 30)
 texture = ExtResource("1_y1uxj")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(60, 60)
+offset_right = 60.0
+offset_bottom = 60.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+custom_minimum_size = Vector2(2.08165e-12, 23)
+layout_mode = 0
+offset_left = 54.0
+offset_top = -11.0
+offset_right = 342.0
+offset_bottom = 12.0
+text = "a placeholder name since i cant think"

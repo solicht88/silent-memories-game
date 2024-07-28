@@ -4,7 +4,7 @@ extends Node2D
 @onready var location = $".."
 @onready var transition = $"../Transition"
 @onready var player = $"../player"
-@onready var inv = $"../player/InventoryUI"
+@onready var inv = $"../CanvasLayer/InventoryUI"
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
