@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjaq4vg860b4v" path="res://sprites/char_1_ver_2.png" id="1_236t4"]
 [ext_resource type="Script" path="res://scripts/char_1.gd" id="1_o8cs5"]
 [ext_resource type="Resource" uid="uid://btr7bxv8qflbx" path="res://scripts/inventory/player_inventory.tres" id="2_0rgk8"]
-[ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory_ui.tscn" id="4_qep0i"]
+[ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="4_qep0i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vj08"]
 size = Vector2(60, 29)
