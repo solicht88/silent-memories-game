@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 300
+@export var inventory: Inventory
 
 @onready var _animation_player = $AnimationPlayer
 @onready var interaction_finder: Area2D = $Direction/InteractionFinder
