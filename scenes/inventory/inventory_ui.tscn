@@ -13,12 +13,12 @@ script = ExtResource("1_edv44")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = 230.0
-offset_top = 65.0
-offset_right = 1050.0
-offset_bottom = 415.0
+offset_left = 240.0
+offset_top = 320.0
+offset_right = 1040.0
+offset_bottom = 570.0
 texture = ExtResource("2_ieqty")
-region_rect = Rect2(230, 70, 820, 340)
+region_rect = Rect2(240, 320, 800, 250)
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
 layout_mode = 1
@@ -27,15 +27,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -402.0
-offset_top = -166.0
-offset_right = 402.0
-offset_bottom = 166.0
+offset_left = -397.0
+offset_top = -126.0
+offset_right = 397.0
+offset_bottom = 126.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
-[node name="inv_UI_slot1" parent="NinePatchRect/GridContainer" instance=ExtResource("3_3nuac")]
+[node name="inv_UI_slot" parent="NinePatchRect/GridContainer" instance=ExtResource("3_3nuac")]
 layout_mode = 2
 
 [node name="inv_UI_slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_3nuac")]
@@ -62,8 +62,8 @@ layout_mode = 2
 [node name="NinePatchRect2" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_left = 320.0
-offset_top = 480.0
+offset_top = 150.0
 offset_right = 960.0
-offset_bottom = 640.0
+offset_bottom = 280.0
 texture = ExtResource("2_ieqty")
-region_rect = Rect2(320, 480, 640, 160)
+region_rect = Rect2(320, 150, 640, 120)

@@ -1,5 +1,11 @@
-[gd_scene format=3 uid="uid://cwo8b7gnwejb3"]
+[gd_scene load_steps=2 format=3 uid="uid://cwo8b7gnwejb3"]
+
+[ext_resource type="Texture2D" uid="uid://dq1jqhn3suj2g" path="res://tilesets/assets/inventory_details.png" id="1_iecw7"]
 
 [node name="Panel" type="Panel"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 640.0
+offset_bottom = 160.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 80)
+texture = ExtResource("1_iecw7")

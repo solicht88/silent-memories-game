@@ -4,10 +4,10 @@
 
 [node name="inv_UI_slot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 80)
-offset_right = 400.0
-offset_bottom = 80.0
+custom_minimum_size = Vector2(395, 60)
+offset_right = 395.0
+offset_bottom = 60.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(200, 40)
+position = Vector2(197.5, 30)
 texture = ExtResource("1_y1uxj")
