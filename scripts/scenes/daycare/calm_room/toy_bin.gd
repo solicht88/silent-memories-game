@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var item: InvItem
+
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var player = $"../player"
 
@@ -9,6 +11,7 @@ func _ready():
 func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
+	player.collect(item)
 	Dialogic.start("toy_bin")
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 

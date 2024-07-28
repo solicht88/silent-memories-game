@@ -7,6 +7,9 @@ extends CharacterBody2D
 @onready var interaction_finder: Area2D = $Direction/InteractionFinder
 @onready var can_move = true
 
+func collect(item):
+	inventory.insert(item)
+
 func get_input():
 	var input_direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")
 	if Input.is_action_pressed("walk_right") || Input.is_action_pressed("walk_left"):

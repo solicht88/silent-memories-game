@@ -16,6 +16,7 @@ texture = ExtResource("1_y1uxj")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
 offset_right = 60.0
 offset_bottom = 60.0
 
@@ -23,6 +24,7 @@ offset_bottom = 60.0
 layout_mode = 2
 
 [node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
+scale = Vector2(0.15, 0.15)
 
 [node name="Label" type="Label" parent="CenterContainer/Panel"]
 custom_minimum_size = Vector2(2.08165e-12, 23)
