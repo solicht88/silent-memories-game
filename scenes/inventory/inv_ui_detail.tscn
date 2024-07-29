@@ -4,6 +4,8 @@
 [ext_resource type="Script" path="res://scripts/inventory/inv_ui_detail.gd" id="1_l0smh"]
 
 [node name="inv_ui_detail" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(640, 120)
 offset_right = 640.0
 offset_bottom = 120.0
 script = ExtResource("1_l0smh")
@@ -13,6 +15,7 @@ position = Vector2(320, 60)
 texture = ExtResource("1_iecw7")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 0
 offset_right = 120.0
 offset_bottom = 120.0
@@ -21,7 +24,7 @@ offset_bottom = 120.0
 layout_mode = 2
 
 [node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
-position = Vector2(-60, -60)
+scale = Vector2(0.5, 0.5)
 
 [node name="Label" type="Label" parent="CenterContainer/Panel"]
 layout_mode = 0
@@ -38,4 +41,4 @@ offset_left = 96.0
 offset_top = 5.0
 offset_right = 377.0
 offset_bottom = 28.0
-text = "placeholder description wow so cool"
+text = "placeholder description because i cant think"

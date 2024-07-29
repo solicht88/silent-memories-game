@@ -33,7 +33,6 @@ offset_left = 54.0
 offset_top = -11.0
 offset_right = 342.0
 offset_bottom = 12.0
-text = "a placeholder name since i cant think"
 
 [node name="item_button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)

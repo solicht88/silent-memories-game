@@ -3,6 +3,7 @@ extends Control
 @onready var player = $"../../player"
 @onready var inv: Inventory = preload("res://scripts/inventory/player_inventory.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+@onready var selected = $NinePatchRect2/GridContainer/inv_ui_detail
 
 var is_open = false
 var can_open = true
@@ -27,6 +28,7 @@ func _input(event):
 				player.can_move = false
 				player._animation_player.stop()
 				InteractionManager.can_interact = false
+				selected.select_item(null)
 				open()
 
 func open():

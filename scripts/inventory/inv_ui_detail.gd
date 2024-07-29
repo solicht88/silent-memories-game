@@ -10,8 +10,10 @@ func select_item(slot: InvSlot):
 		title.visible = false
 		description.visible = false
 	else:
-		item_visual.visible = true
 		if slot.item != null:
+			item_visual.visible = true
 			item_visual.texture = slot.item.texture
-		title.visible = true
-		description.visible = true
+			title.visible = true
+			title.text = str(slot.item.name)
+			description.visible = true
+			description.text = str(slot.item.description)

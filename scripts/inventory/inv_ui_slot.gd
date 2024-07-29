@@ -5,6 +5,9 @@ extends Panel
 @onready var item_detail = $"../../../NinePatchRect2/GridContainer/inv_ui_detail"
 @onready var item_slot: InvSlot
 
+func _ready():
+	label_text.visible = false
+
 func update(slot: InvSlot):
 	if !slot:
 		item_visual.visible = false
