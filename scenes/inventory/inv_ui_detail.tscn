@@ -1,11 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwo8b7gnwejb3"]
+[gd_scene load_steps=3 format=3 uid="uid://cwo8b7gnwejb3"]
 
 [ext_resource type="Texture2D" uid="uid://dq1jqhn3suj2g" path="res://tilesets/assets/inventory_details.png" id="1_iecw7"]
+[ext_resource type="Script" path="res://scripts/inventory/inv_ui_detail.gd" id="1_l0smh"]
 
 [node name="inv_ui_detail" type="Panel"]
 offset_right = 640.0
 offset_bottom = 120.0
+script = ExtResource("1_l0smh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(320, 60)
 texture = ExtResource("1_iecw7")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 120.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
+position = Vector2(-60, -60)
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -35.0
+offset_right = 220.0
+offset_bottom = -12.0
+scale = Vector2(1.2, 1.2)
+text = "placeholder name"
+
+[node name="Label2" type="Label" parent="CenterContainer/Panel"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 5.0
+offset_right = 377.0
+offset_bottom = 28.0
+text = "placeholder description wow so cool"

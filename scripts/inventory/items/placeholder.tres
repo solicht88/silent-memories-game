@@ -7,3 +7,4 @@
 script = ExtResource("1_p70jo")
 name = "placeholder"
 texture = ExtResource("2_vkuqw")
+description = "a placeholder item"

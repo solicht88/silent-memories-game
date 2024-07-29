@@ -34,3 +34,11 @@ offset_top = -11.0
 offset_right = 342.0
 offset_bottom = 12.0
 text = "a placeholder name since i cant think"
+
+[node name="item_button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 395.0
+offset_bottom = 60.0
+
+[connection signal="pressed" from="item_button" to="." method="_on_item_button_pressed"]
