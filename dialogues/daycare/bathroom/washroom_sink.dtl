@@ -1,3 +1,4 @@
-char_1 (Neutral): A small sink to wash your hands in. The adjacent dispenser is full of pink liquid soap.
-char_1: There's a large mirror in front of the sink. I can clearly see my reflection.
+char_1 (Neutral): A small sink to wash your hands in.
+char_1: The adjacent dispenser is full of pink liquid soap.
+char_1: <Empty Text Event>
 [end_timeline]

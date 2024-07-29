@@ -1,3 +1,8 @@
-char_1 (Neutral): !
-char_1: A key fell out of the book.
+placeholder
+if {inventory.daycare.pink_key} == false:
+	char_1 (Neutral): !
+	char_1: A key fell out of the book.
+	set {inventory.daycare.pink_key} = true
+else:
+	idk what to put yet
 [end_timeline]

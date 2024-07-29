@@ -75,7 +75,11 @@ directories/dtl_directory={
 variables={
 "inventory": {
 "daycare": {
-"nap_key": ""
+"nap_key": false,
+"pink_key": false,
+"safe_code": "",
+"safe_key": false,
+"staff_key": false
 }
 },
 "testing": {

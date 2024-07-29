@@ -13,8 +13,8 @@ func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
 	inv.can_open = false
-	#if !inv.pink_key.collected:
-	player.collect(item)
+	if !Dialogic.VAR.inventory.daycare.pink_key:
+		player.collect(item)
 	Dialogic.start("red_book")
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 

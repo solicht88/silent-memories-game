@@ -1,2 +1,9 @@
-char_1 (Neutral): A locked safe.
+char_1 (Neutral): A secure safe.
+[text_input var="inventory.daycare.safe_code"]
+if {inventory.daycare.safe_code} == "5372":
+	char_1 (Neutral): It's open!
+	char_1: Is this the key to the exit?
+	Obtained 'Caretaker Key!'
+else:
+	char_1 (Neutral): No luck, huh...
 [end_timeline]

@@ -8,7 +8,6 @@ extends Node2D
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
-	Dialogic.VAR.inventory.daycare.nap_key = false
 
 func _on_interact():
 	player.can_move = false
