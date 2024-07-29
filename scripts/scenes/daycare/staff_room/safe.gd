@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var item: InvItem
+
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var player = $"../player"
 @onready var inv = $"../CanvasLayer/InventoryUI"
@@ -11,6 +13,7 @@ func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
 	inv.can_open = false
+	player.collect(item)
 	Dialogic.start("safe")
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 

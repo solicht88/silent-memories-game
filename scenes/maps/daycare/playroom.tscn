@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=29 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/playroom.gd" id="1_6avgg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
@@ -10,7 +10,9 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/reception_door.gd" id="7_i7n0q"]
 [ext_resource type="PackedScene" uid="uid://bdwhcmngtlin4" path="res://scenes/interaction/interaction_area.tscn" id="8_6sj3l"]
 [ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="10_cq0i3"]
+[ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="13_uytup"]
 [ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="14_0fh6h"]
+[ext_resource type="Texture2D" uid="uid://bsbcbtcm8yr2w" path="res://tilesets/assets/inventory/daycare/staff_room_key.png" id="14_v5djm"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/blue_chest.gd" id="21_yifas"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/pink_chest.gd" id="22_2m2cr"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="25_bnfu2"]
@@ -719,6 +721,12 @@ radius = 26.8328
 [sub_resource type="CircleShape2D" id="CircleShape2D_1v5o0"]
 radius = 25.0599
 
+[sub_resource type="Resource" id="Resource_wgeq2"]
+script = ExtResource("13_uytup")
+name = "Staff key"
+texture = ExtResource("14_v5djm")
+description = "A key to unlock staff only rooms."
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xs6s"]
 size = Vector2(238.5, 61)
 
@@ -865,6 +873,7 @@ script = ExtResource("21_yifas")
 [node name="pink_chest" parent="." instance=ExtResource("4_ebl86")]
 position = Vector2(840, 248)
 script = ExtResource("22_2m2cr")
+item = SubResource("Resource_wgeq2")
 
 [node name="table1" type="Node2D" parent="."]
 script = ExtResource("10_cq0i3")

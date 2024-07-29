@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c3w70hgos7mjm"]
+[gd_scene load_steps=27 format=3 uid="uid://c3w70hgos7mjm"]
 
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_2fmp8"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/nap_room/nap_room.gd" id="1_uk76b"]
@@ -10,6 +10,10 @@
 [ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="7_v1p7t"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="8_rsply"]
 [ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="10_75uyp"]
+[ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="11_eio7d"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/nap_room/red_book.gd" id="12_xhhf3"]
+[ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="13_ywykd"]
+[ext_resource type="Texture2D" uid="uid://ddbdyrb03nd4y" path="res://tilesets/assets/inventory/daycare/pink_chest_key.png" id="14_uiaqi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lirjw"]
 texture = ExtResource("1_2fmp8")
@@ -1093,6 +1097,12 @@ size = Vector2(21, 45)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x47pu"]
 size = Vector2(870, 198.5)
 
+[sub_resource type="Resource" id="Resource_ses20"]
+script = ExtResource("13_ywykd")
+name = "Pink Toy Box Key"
+texture = ExtResource("14_uiaqi")
+description = "A key to open the pink toy box."
+
 [node name="nap_room" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_uk76b")
@@ -1161,6 +1171,11 @@ script = ExtResource("7_v1p7t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sleep_area/InteractionArea"]
 position = Vector2(524, 349.75)
 shape = SubResource("RectangleShape2D_x47pu")
+
+[node name="red_book" parent="." instance=ExtResource("11_eio7d")]
+position = Vector2(1142, 280)
+script = ExtResource("12_xhhf3")
+item = SubResource("Resource_ses20")
 
 [node name="Transition" parent="." instance=ExtResource("8_rsply")]
 

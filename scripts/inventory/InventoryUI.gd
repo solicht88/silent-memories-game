@@ -19,7 +19,7 @@ func update_slots():
 
 func _input(event):
 	if can_open:
-		if event.is_action_pressed("open_inv"):
+		if event.is_action_pressed("open_menu"):
 			if is_open:
 				close()
 				player.can_move = true

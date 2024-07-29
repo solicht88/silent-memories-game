@@ -1,3 +1,7 @@
 char_1 (Neutral): A green toy bin with a smiley face on it.
 char_1: There are many coloring books and markers inside, accompanied by various stuffed animals.
+if {inventory.daycare.nap_key} == false:
+	char_1 (Neutral): ...A green key can be seen at the bottom of the bin.
+	Obtained 'Nap Room Key!'
+	set {inventory.daycare.nap_key} = true
 [end_timeline]
