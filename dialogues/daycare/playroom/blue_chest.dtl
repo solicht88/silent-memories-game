@@ -5,6 +5,7 @@ elif {inventory.daycare.blue_key} == true:
 	char_1 (Neutral): I unlocked it using the blue key.
 	char_1: There are 7 toys in this chest.
 	set {inventory.daycare.blue_open} = true
+	[signal arg="unlocked_chest"]
 else:
 	char_1 (Neutral): Seems to be locked.
 [end_timeline]

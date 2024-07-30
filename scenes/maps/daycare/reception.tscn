@@ -696,11 +696,11 @@ position = Vector2(1001.5, 62.5)
 shape = SubResource("RectangleShape2D_2uggs")
 
 [node name="staff_door" parent="." instance=ExtResource("7_72jl3")]
-position = Vector2(-57, 648)
+position = Vector2(-57, 632)
 script = ExtResource("10_0246s")
 
 [node name="kitchen_door" parent="." instance=ExtResource("7_72jl3")]
-position = Vector2(1337, 648)
+position = Vector2(1337, 632)
 script = ExtResource("11_0xca7")
 
 [node name="book" parent="." instance=ExtResource("7_72jl3")]

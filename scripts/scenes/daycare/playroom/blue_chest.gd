@@ -11,8 +11,13 @@ func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
 	inv.can_open = false
-	Dialogic.start("blue_chest")
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.start("blue_chest")
+
+func _on_dialogic_signal(argument: String):
+	if argument == "unlocked_chest":
+		inv.remove_slot("Blue Chest Key")
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)

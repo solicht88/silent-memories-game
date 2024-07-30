@@ -23,8 +23,9 @@ func _on_interact():
 	else:
 		Dialogic.timeline_ended.connect(_on_timeline_ended)
 		Dialogic.start("unlocked_door")
-		inv.remove_slot("Staff Key")
 		Dialogic.VAR.doors.daycare.staff_open = true
+		if Dialogic.VAR.doors.daycare.kitchen_open:
+			inv.remove_slot("Staff Key")
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)

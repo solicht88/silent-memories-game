@@ -1,9 +1,14 @@
 char_1 (Neutral): A secure safe.
-[text_input var="inventory.daycare.safe_code"]
-if {inventory.daycare.safe_code} == "5372":
+if {inventory.daycare.caretaker_key} == false:
+	[text_input var="inventory.daycare.safe_code"]
+else:
+	[end_timeline]
+if {inventory.daycare.safe_code}  ==  "5372" && {inventory.daycare.caretaker_key} == false:
 	char_1 (Neutral): It's open!
 	char_1: Is this the key to the exit?
 	Obtained 'Caretaker Key!'
+	[signal arg="gained_key"]
+	set {inventory.daycare.caretaker_key} = true
 else:
 	char_1 (Neutral): No luck, huh...
 [end_timeline]
