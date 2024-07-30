@@ -24,14 +24,10 @@ func update(slot: InvSlot):
 
 func remove(item: String):
 	if item == label_text.text:
-		#self.item = null
+		item_slot.item = null
+		inv.slots[self.slot_position].item = null
 		item_visual.visible = false
 		label_text.visible = false
-		'''
-		inv.slots[self.slot_position].item.name = ""
-		inv.slots[self.slot_position].item.texture = null
-		inv.slots[self.slot_position].item.description = ""
-		'''
 
 func _on_item_button_pressed():
 	if item_slot != null:

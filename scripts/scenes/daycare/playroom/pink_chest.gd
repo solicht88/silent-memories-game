@@ -14,8 +14,8 @@ func _on_interact():
 	InteractionManager.can_interact = false
 	inv.can_open = false
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-	Dialogic.start("pink_chest")
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	Dialogic.start("pink_chest")
 
 func _on_dialogic_signal(argument: String):
 	if argument == "obtained_key":

@@ -723,7 +723,7 @@ radius = 25.0599
 
 [sub_resource type="Resource" id="Resource_wgeq2"]
 script = ExtResource("13_uytup")
-name = "Staff key"
+name = "Staff Key"
 texture = ExtResource("14_v5djm")
 description = "A key to unlock staff only rooms."
 

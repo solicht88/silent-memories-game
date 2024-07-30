@@ -40,6 +40,7 @@ directories/dtl_directory={
 "dollhouse": "res://dialogues/daycare/playroom/dollhouse.dtl",
 "faces": "res://dialogues/daycare/playroom/faces.dtl",
 "fridge": "res://dialogues/daycare/kitchen/fridge.dtl",
+"locked_door": "res://dialogues/locked_door.dtl",
 "mushroom": "res://dialogues/daycare/calm_room/mushroom.dtl",
 "nameplate": "res://dialogues/daycare/reception/nameplate.dtl",
 "nap_sign": "res://dialogues/daycare/playroom/nap_sign.dtl",
@@ -68,16 +69,24 @@ directories/dtl_directory={
 "timeline": "res://dialogues/timeline.dtl",
 "toilet": "res://dialogues/daycare/bathroom/toilet.dtl",
 "toy_bin": "res://dialogues/daycare/calm_room/toy_bin.dtl",
+"unlocked_door": "res://dialogues/unlocked_door.dtl",
 "washroom_poster": "res://dialogues/daycare/bathroom/washroom_poster.dtl",
 "washroom_sink": "res://dialogues/daycare/bathroom/washroom_sink.dtl",
 "yellow_book": "res://dialogues/daycare/calm_room/yellow_book.dtl"
 }
 variables={
+"doors": {
+"daycare": {
+"nap_open": false,
+"staff_open": false
+}
+},
 "inventory": {
 "daycare": {
 "blue_key": false,
 "blue_open": false,
 "nap_key": false,
+"nap_room": false,
 "pink_key": false,
 "safe_code": "",
 "safe_key": false,
