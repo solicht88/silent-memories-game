@@ -24,6 +24,7 @@ func _on_dialogic_signal(argument: String):
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 	Dialogic.signal_event.disconnect(_on_dialogic_signal)
+	inv.remove_slot("Pink Chest Key")
 	player.can_move = true
 	InteractionManager.can_interact = true
 	inv.can_open = true

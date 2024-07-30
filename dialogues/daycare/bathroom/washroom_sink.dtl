@@ -1,4 +1,9 @@
 char_1 (Neutral): A small sink to wash your hands in.
 char_1: The adjacent dispenser is full of pink liquid soap.
-char_1: <Empty Text Event>
+if {inventory.daycare.blue_key} == false:
+	char_1 (Neutral): ...Is there something behind the mirror?
+	Obtained 'Blue Chest Key!'
+	set {inventory.daycare.blue_key} = true
+else:
+	char_1 (Neutral): I'm reflected clearly in the mirror.
 [end_timeline]

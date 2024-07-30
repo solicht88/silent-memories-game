@@ -3,10 +3,6 @@
 [ext_resource type="Script" path="res://scripts/inventory/inventory.gd" id="2_6eccs"]
 [ext_resource type="Script" path="res://scripts/inventory/inv_slot.gd" id="2_kuyty"]
 
-[sub_resource type="Resource" id="Resource_28a2r"]
-script = ExtResource("2_kuyty")
-label = ""
-
 [sub_resource type="Resource" id="Resource_6e1ji"]
 script = ExtResource("2_kuyty")
 label = ""
@@ -35,6 +31,10 @@ label = ""
 script = ExtResource("2_kuyty")
 label = ""
 
+[sub_resource type="Resource" id="Resource_vo70m"]
+script = ExtResource("2_kuyty")
+label = ""
+
 [resource]
 script = ExtResource("2_6eccs")
-slots = Array[ExtResource("2_kuyty")]([SubResource("Resource_28a2r"), SubResource("Resource_6e1ji"), SubResource("Resource_5s5xv"), SubResource("Resource_8hexi"), SubResource("Resource_jw68o"), SubResource("Resource_mjco7"), SubResource("Resource_cu1h2"), SubResource("Resource_1i0n3")])
+slots = Array[ExtResource("2_kuyty")]([SubResource("Resource_6e1ji"), SubResource("Resource_5s5xv"), SubResource("Resource_8hexi"), SubResource("Resource_jw68o"), SubResource("Resource_mjco7"), SubResource("Resource_cu1h2"), SubResource("Resource_1i0n3"), SubResource("Resource_vo70m")])

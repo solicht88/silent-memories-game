@@ -1099,7 +1099,7 @@ size = Vector2(870, 198.5)
 
 [sub_resource type="Resource" id="Resource_ses20"]
 script = ExtResource("13_ywykd")
-name = "Pink Toy Box Key"
+name = "Pink Chest Key"
 texture = ExtResource("14_uiaqi")
 description = "A key to open the pink toy box."
 

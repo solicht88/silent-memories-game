@@ -843,7 +843,7 @@ size = Vector2(21, 45)
 
 [sub_resource type="Resource" id="Resource_xsmk5"]
 script = ExtResource("10_isjfh")
-name = "Blue Toy Box Key"
+name = "Blue Chest Key"
 texture = ExtResource("11_mw8k7")
 description = "A key to open the blue toy box."
 

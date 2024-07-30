@@ -1,3 +1,10 @@
 char_1 (Neutral): A blue toy chest.
-char_1: Seems to be locked.
+if {inventory.daycare.blue_open} == true:
+	char_1 (Neutral): There are 7 toys in this chest.
+elif {inventory.daycare.blue_key} == true:
+	char_1 (Neutral): I unlocked it using the blue key.
+	char_1: There are 7 toys in this chest.
+	set {inventory.daycare.blue_open} = true
+else:
+	char_1 (Neutral): Seems to be locked.
 [end_timeline]

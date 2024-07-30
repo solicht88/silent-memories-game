@@ -5,7 +5,8 @@ elif {inventory.daycare.staff_key} == false:
 	char_1 (Neutral): I'll try unlocking it using the pink key.
 	char_1 (Neutral): ...It worked! There is another key inside the chest.
 	Obtained 'Staff Key!'
+	set {inventory.daycare.staff_key} = true
 	[signal arg="obtained_key"]
 else:
-	char_1 (Neutral): A few toys are scattered around inside.
+	char_1 (Neutral): 5 toys are scattered around inside.
 [end_timeline]

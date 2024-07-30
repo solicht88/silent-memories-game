@@ -16,6 +16,11 @@ func _ready():
 func update_slots():
 	for i in range(min(inv.slots.size(), slots.size())):
 		slots[i].update(inv.slots[i])
+		slots[i].slot_position = str(i)
+
+func remove_slot(item: String):
+	for i in range(min(inv.slots.size(), slots.size())):
+		slots[i].remove(item)
 
 func _input(event):
 	if can_open:
