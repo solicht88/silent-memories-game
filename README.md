@@ -1,4 +1,4 @@
-## Silent Memories
+## 🌙 Silent Memories
 
 Silent Memories is a WIP pixel RPG/puzzle game.  
 
@@ -6,14 +6,16 @@ You wake up in your old kindergarten, unable to speak.
 Luckily your best friend is here, but they can't see anything.  
 Will you be able to find the way out?  
 
-Right now, I am working on assets and the game's basic functions.  
+I am currently working on assets and the game's basic functions.
 
-## Software used
+## 🖥️ Software used
 Aseprite (https://www.aseprite.org/)  
-Godot (https://godotengine.org/license/)  
+Godot (https://godotengine.org/license/) 
+### Plugins
+Dialogic 2 (https://github.com/dialogic-godot/dialogic)
 
-The end goal is to have a fully functional game that others can enjoy.  
+**My goal is to have a fully functional game that others can enjoy.**  
 
 **Notes:**  
 - Tilesets are drawn on multiple frames of the same .aseprite file  
-- Game can currently only be run through the Godot Engine. Since it is not complete, expect errors!
+- The game can only be run through the Godot Engine at the moment. Since it is not complete, expect errors!
