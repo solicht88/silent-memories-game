@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwcokwrsyk1xa"]
+[gd_scene load_steps=5 format=3 uid="uid://dwcokwrsyk1xa"]
 
 [ext_resource type="Texture2D" uid="uid://c1ttfnhhngeav" path="res://tilesets/assets/menu_bg.png" id="1_32q3f"]
+[ext_resource type="Script" path="res://scripts/save_menu.gd" id="1_r54ub"]
 [ext_resource type="Theme" uid="uid://de7skdtjirnrp" path="res://scenes/save_menu/save_file_buttons.tres" id="2_44uaw"]
 [ext_resource type="Theme" uid="uid://bwhl5comn7h27" path="res://scenes/save_menu/save_buttons.tres" id="3_7yvl8"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_r54ub")
 
 [node name="MenuBg" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
@@ -50,6 +52,25 @@ theme = ExtResource("2_44uaw")
 
 [node name="Save" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 880.0
+offset_top = 260.0
+offset_right = 1120.0
+offset_bottom = 340.0
 theme = ExtResource("3_7yvl8")
+text = "Save"
+
+[node name="Load" type="Button" parent="."]
+offset_left = 880.0
+offset_top = 380.0
+offset_right = 1120.0
+offset_bottom = 460.0
+theme = ExtResource("3_7yvl8")
+text = "Load
+"
+
+[connection signal="pressed" from="SaveFile1" to="." method="_on_save_file_1_pressed"]
+[connection signal="pressed" from="SaveFile2" to="." method="_on_save_file_2_pressed"]
+[connection signal="pressed" from="SaveFile3" to="." method="_on_save_file_3_pressed"]
+[connection signal="pressed" from="SaveFile4" to="." method="_on_save_file_4_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Load" to="." method="_on_load_pressed"]

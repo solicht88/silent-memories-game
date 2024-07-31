@@ -1,6 +1,5 @@
 extends Control
 
-@onready var player = $"../../player"
 @onready var inv: Inventory = preload("res://scripts/inventory/player_inventory.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
 @onready var selected = $NinePatchRect2/GridContainer/inv_ui_detail

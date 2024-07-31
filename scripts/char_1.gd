@@ -1,26 +1,19 @@
 extends CharacterBody2D
 
-var save_file_path = "user:://save/"
+var save_file_path = "user://save/"
 var save_file_name = "SaveData.tres"
-var save_data = SaveData.new()
+var saveData = SaveData.new()
 
 @export var inventory: Inventory
 
-@onready var speed = save_data.speed
+@onready var speed = saveData.speed
 @onready var _animation_player = $AnimationPlayer
 @onready var interaction_finder: Area2D = $Direction/InteractionFinder
 @onready var can_move = true
 
 func collect(item):
 	inventory.insert(item)
-
-func get_input():
-	var input_direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")
-	if Input.is_action_pressed("walk_right") || Input.is_action_pressed("walk_left"):
-		input_direction.y = 0
-	elif Input.is_action_pressed("walk_up") || Input.is_action_pressed("walk_down"):
-		input_direction.x = 0
-	velocity = input_direction * speed
+	saveData.save_inventory(inventory)
 
 func _ready():
 	verify_save_directory(save_file_path)
@@ -29,12 +22,23 @@ func verify_save_directory(path: String):
 	DirAccess.make_dir_absolute(path)
 
 func load_data():
-	save_data = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
+	saveData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
+	self.position = saveData.SavePos
+	self.inventory = saveData.inventory
 	print("loaded")
 
-func save():
-	ResourceSaver.save(save_data, save_file_path + save_file_name)
+func save_data():
+	saveData.SavePos = self.position
+	ResourceSaver.save(saveData, save_file_path + save_file_name)
 	print("save")
+
+func get_input():
+	var input_direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")
+	if Input.is_action_pressed("walk_right") || Input.is_action_pressed("walk_left"):
+		input_direction.y = 0
+	elif Input.is_action_pressed("walk_up") || Input.is_action_pressed("walk_down"):
+		input_direction.x = 0
+	velocity = input_direction * speed
 
 func _physics_process(_delta):
 	if can_move:

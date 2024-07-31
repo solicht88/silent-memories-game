@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://df6sq1dsx4qpp"]
 
-[ext_resource type="Script" path="res://scripts/pause_menu/menu_manager.gd" id="1_05oy6"]
+[ext_resource type="Script" path="res://scripts/menu_manager.gd" id="1_05oy6"]
 [ext_resource type="Texture2D" uid="uid://c1ttfnhhngeav" path="res://tilesets/assets/menu_bg.png" id="1_miv5k"]
 [ext_resource type="Theme" uid="uid://dfrn6glountjj" path="res://scenes/pause_menu/button_theme.tres" id="2_fjxcl"]
 
@@ -55,4 +55,5 @@ text = "Exit Game"
 
 [connection signal="pressed" from="Unpause" to="." method="_on_unpause_pressed"]
 [connection signal="pressed" from="Inventory" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
