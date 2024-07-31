@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/inventory/InventoryUI.gd" id="1_edv44"]
 [ext_resource type="Texture2D" uid="uid://c1ttfnhhngeav" path="res://tilesets/assets/menu_bg.png" id="2_4a5jl"]
-[ext_resource type="Texture2D" uid="uid://dgp1551cios0h" path="res://tilesets/assets/inventory.png" id="2_ieqty"]
+[ext_resource type="Texture2D" path="res://tilesets/assets/inventory.png" id="2_ieqty"]
 [ext_resource type="PackedScene" uid="uid://s43wtmjh6lvw" path="res://scenes/inventory/inv_ui_slot.tscn" id="3_3nuac"]
 [ext_resource type="PackedScene" uid="uid://cwo8b7gnwejb3" path="res://scenes/inventory/inv_ui_detail.tscn" id="4_5pya7"]
 
