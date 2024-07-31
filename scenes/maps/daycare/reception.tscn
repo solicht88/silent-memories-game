@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cq304oojpibow"]
+[gd_scene load_steps=25 format=3 uid="uid://cq304oojpibow"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/reception.gd" id="1_6lviy"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="1_n8fkg"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/kitchen_door.gd" id="11_0xca7"]
 [ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="11_wxvbj"]
 [ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="13_mgqro"]
+[ext_resource type="PackedScene" uid="uid://df6sq1dsx4qpp" path="res://scenes/pause_menu/pause_menu.tscn" id="14_x74lv"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="19_ldw6p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hep1c"]
@@ -755,3 +756,5 @@ script = ExtResource("11_wxvbj")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("13_mgqro")]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("14_x74lv")]

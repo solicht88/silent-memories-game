@@ -22,20 +22,6 @@ func remove_slot(item: String):
 	for i in range(min(inv.slots.size(), slots.size())):
 		slots[i].remove(item)
 
-func _input(event):
-	if can_open:
-		if event.is_action_pressed("open_menu"):
-			if is_open:
-				close()
-				player.can_move = true
-				InteractionManager.can_interact = true
-			else:
-				player.can_move = false
-				player._animation_player.stop()
-				InteractionManager.can_interact = false
-				selected.select_item(null)
-				open()
-
 func open():
 	visible = true
 	is_open = true

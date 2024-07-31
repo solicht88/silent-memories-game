@@ -20,7 +20,6 @@ config/icon="res://icon.svg"
 SceneSwitcher="*res://scripts/scene_switcher.gd"
 InteractionManager="*res://scenes/interaction/interaction_manager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-MenuManager="*res://scripts/pause_menu/menu_manager.gd"
 
 [dialogic]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dwcnxm3avdbb7"]
+[gd_scene load_steps=30 format=3 uid="uid://dwcnxm3avdbb7"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/playroom.gd" id="1_6avgg"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_h7f11"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="13_uytup"]
 [ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="14_0fh6h"]
 [ext_resource type="Texture2D" uid="uid://bsbcbtcm8yr2w" path="res://tilesets/assets/inventory/daycare/staff_room_key.png" id="14_v5djm"]
+[ext_resource type="PackedScene" uid="uid://df6sq1dsx4qpp" path="res://scenes/pause_menu/pause_menu.tscn" id="17_u8obb"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/blue_chest.gd" id="21_yifas"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/playroom/pink_chest.gd" id="22_2m2cr"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="25_bnfu2"]
@@ -901,3 +902,5 @@ shape = SubResource("RectangleShape2D_4xs6s")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("14_0fh6h")]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("17_u8obb")]

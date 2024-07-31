@@ -52,3 +52,7 @@ offset_right = 850.0
 offset_bottom = 580.0
 theme = ExtResource("2_fjxcl")
 text = "Exit Game"
+
+[connection signal="pressed" from="Unpause" to="." method="_on_unpause_pressed"]
+[connection signal="pressed" from="Inventory" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
