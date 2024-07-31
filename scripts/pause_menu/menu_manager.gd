@@ -1,5 +1,9 @@
 extends Control
 
+var save_file_path = "user:://save/"
+var save_file_name = "SaveData.tres"
+var save_data = SaveData.new()
+
 @onready var player = $"../../player"
 @onready var inv = $"../InventoryUI"
 

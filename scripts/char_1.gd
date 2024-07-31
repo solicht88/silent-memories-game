@@ -1,8 +1,12 @@
 extends CharacterBody2D
 
-@export var speed = 300
+var save_file_path = "user:://save/"
+var save_file_name = "SaveData.tres"
+var save_data = SaveData.new()
+
 @export var inventory: Inventory
 
+@onready var speed = save_data.speed
 @onready var _animation_player = $AnimationPlayer
 @onready var interaction_finder: Area2D = $Direction/InteractionFinder
 @onready var can_move = true
@@ -17,6 +21,20 @@ func get_input():
 	elif Input.is_action_pressed("walk_up") || Input.is_action_pressed("walk_down"):
 		input_direction.x = 0
 	velocity = input_direction * speed
+
+func _ready():
+	verify_save_directory(save_file_path)
+
+func verify_save_directory(path: String):
+	DirAccess.make_dir_absolute(path)
+
+func load_data():
+	save_data = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
+	print("loaded")
+
+func save():
+	ResourceSaver.save(save_data, save_file_path + save_file_name)
+	print("save")
 
 func _physics_process(_delta):
 	if can_move:
