@@ -11,8 +11,10 @@ func _ready():
 func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
-	if !Dialogic.VAR.inventory.daycare.blue_key:
+	if !player.saveData.blue_key:
 		player.collect(item)
+		Dialogic.VAR.inventory.daycare.blue_key = false
+		player.saveData.blue_key = true
 	Dialogic.start("washroom_sink")
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 

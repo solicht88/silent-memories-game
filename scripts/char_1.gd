@@ -5,11 +5,12 @@ var save_file_name = "SaveData.tres"
 var saveData = SaveData.new()
 
 @export var inventory: Inventory
+@export var speed = 300
 
-@onready var speed = saveData.speed
 @onready var _animation_player = $AnimationPlayer
 @onready var interaction_finder: Area2D = $Direction/InteractionFinder
 @onready var can_move = true
+@onready var cur_node = $".."
 
 func collect(item):
 	inventory.insert(item)
@@ -22,8 +23,9 @@ func verify_save_directory(path: String):
 
 func load_data():
 	saveData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
-	self.position = saveData.SavePos
+	#self.position = saveData.SavePos
 	inventory.slots = saveData.inventory
+	SceneSwitcher.switch_scene(saveData.CurRoom, saveData.SavePos)
 	#print(inventory.slots)
 	inventory.update.emit()
 	print("loaded")
@@ -31,8 +33,9 @@ func load_data():
 func save_data():
 	saveData.SavePos = self.position
 	saveData.save_inventory(inventory.slots)
+	#print(saveData.CurRoom)
 	ResourceSaver.save(saveData, save_file_path + save_file_name)
-	print("save")
+	print("saved")
 
 func get_input():
 	var input_direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")

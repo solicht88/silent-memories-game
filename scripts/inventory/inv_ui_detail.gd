@@ -4,6 +4,10 @@ extends Panel
 @onready var title: Label = $CenterContainer/Panel/Label
 @onready var description: Label = $CenterContainer/Panel/Label2
 
+func _ready():
+	title.visible = false
+	description.visible = false
+
 func select_item(slot: InvSlot):
 	if !slot:
 		item_visual.visible = false

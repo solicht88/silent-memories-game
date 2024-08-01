@@ -14,12 +14,13 @@ func _ready():
 	InteractionManager.can_interact = false
 	inv.can_open = false
 	transition.play("fade_out")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.6).timeout
 	player.can_move = true
 	InteractionManager.can_interact = true
 	inv.can_open = true
 	#Dialogic.signal_event.connect(_on_dialogic_signal)
 	#Dialogic.start("timeline")
+	player.saveData.CurRoom = "res://scenes/maps/daycare/reception.tscn"
 
 '''
 func _on_dialogic_signal(argument: String):

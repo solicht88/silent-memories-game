@@ -13,18 +13,18 @@ func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
 	inv.can_open = false
-	if !Dialogic.VAR.inventory.daycare.nap_key:
+	if !player.saveData.nap_key:
 		Dialogic.timeline_ended.connect(_on_timeline_ended)
 		Dialogic.start("locked_door")
-	elif Dialogic.VAR.doors.daycare.nap_open:
+	elif player.saveData.nap_open:
 		transition.play("fade_in")
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.6).timeout
 		SceneSwitcher.switch_scene("res://scenes/maps/daycare/nap_room.tscn", location.nap_room)
 	else:
 		Dialogic.timeline_ended.connect(_on_timeline_ended)
 		Dialogic.start("unlocked_door")
 		inv.remove_slot("Nap Room Key")
-		Dialogic.VAR.doors.daycare.nap_open = true
+		player.saveData.nap_open = true
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)

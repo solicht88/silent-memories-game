@@ -19,7 +19,7 @@ func _on_interact():
 		Dialogic.start("locked_door")
 	elif player.saveData.kitchen_open:
 		transition.play("fade_in")
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.6).timeout
 		SceneSwitcher.switch_scene("res://scenes/maps/daycare/kitchen.tscn", location.kitchen)
 	else:
 		Dialogic.timeline_ended.connect(_on_timeline_ended)

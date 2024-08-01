@@ -1,6 +1,7 @@
 extends Control
 
 @onready var player = $"../../player"
+@onready var transition = $"../../Transition"
 
 var is_open = false
 
@@ -31,4 +32,6 @@ func _on_save_pressed():
 	player.save_data()
 
 func _on_load_pressed():
+	transition.play("fade_in")
+	await get_tree().create_timer(0.6).timeout
 	player.load_data()

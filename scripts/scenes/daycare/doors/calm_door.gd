@@ -14,5 +14,5 @@ func _on_interact():
 	InteractionManager.can_interact = false
 	inv.can_open = false
 	transition.play("fade_in")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.6).timeout
 	SceneSwitcher.switch_scene("res://scenes/maps/daycare/calm_room.tscn", location.calm_room)

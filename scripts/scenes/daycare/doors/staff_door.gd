@@ -18,7 +18,7 @@ func _on_interact():
 		Dialogic.start("locked_door")
 	elif Dialogic.VAR.doors.daycare.staff_open:
 		transition.play("fade_in")
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.6).timeout
 		SceneSwitcher.switch_scene("res://scenes/maps/daycare/staff_room.tscn", location.staff_room)
 	else:
 		Dialogic.timeline_ended.connect(_on_timeline_ended)
