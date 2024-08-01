@@ -16,6 +16,7 @@ func update_slots():
 	for i in range(min(inv.slots.size(), slots.size())):
 		slots[i].update(inv.slots[i])
 		slots[i].slot_position = str(i)
+	print("updated")
 
 func remove_slot(item: String):
 	for i in range(min(inv.slots.size(), slots.size())):

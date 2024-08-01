@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d24s32j0bcyms"]
+[gd_scene load_steps=29 format=3 uid="uid://d24s32j0bcyms"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/calm_room/calm_room.gd" id="1_ka2uw"]
 [ext_resource type="Texture2D" uid="uid://bgxlgv1q8qxfx" path="res://tilesets/daycare/daycare_floor.png" id="1_oqwhk"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="12_4q3i0"]
 [ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="14_mnoyc"]
 [ext_resource type="PackedScene" uid="uid://df6sq1dsx4qpp" path="res://scenes/pause_menu/pause_menu.tscn" id="15_7tg43"]
+[ext_resource type="PackedScene" uid="uid://dwcokwrsyk1xa" path="res://scenes/save_menu/save_menu.tscn" id="16_w2utk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3ggl"]
 texture = ExtResource("1_oqwhk")
@@ -1338,3 +1339,5 @@ script = ExtResource("14_mnoyc")
 [node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("12_4q3i0")]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("15_7tg43")]
+
+[node name="SaveMenu" parent="CanvasLayer" instance=ExtResource("16_w2utk")]
