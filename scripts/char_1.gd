@@ -13,7 +13,6 @@ var saveData = SaveData.new()
 
 func collect(item):
 	inventory.insert(item)
-	saveData.save_inventory(inventory.slots)
 
 func _ready():
 	verify_save_directory(save_file_path)
@@ -31,6 +30,7 @@ func load_data():
 
 func save_data():
 	saveData.SavePos = self.position
+	saveData.save_inventory(inventory.slots)
 	ResourceSaver.save(saveData, save_file_path + save_file_name)
 	print("save")
 

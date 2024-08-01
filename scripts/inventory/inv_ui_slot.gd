@@ -15,13 +15,16 @@ func update(slot: InvSlot):
 		item_visual.visible = false
 		label_text.visible = false
 	else:
-		item_visual.visible = true
 		if slot.item != null:
+			item_visual.visible = true
 			item_visual.texture = slot.item.texture
 			label_text.text = str(slot.item.name)
 			print(slot.item.name)
-		label_text.visible = true
-		item_slot = slot
+			label_text.visible = true
+			item_slot = slot
+		else:
+			item_visual.visible = false
+			label_text.visible = false
 
 func remove(item: String):
 	if item == label_text.text:

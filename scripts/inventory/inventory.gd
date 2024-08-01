@@ -11,4 +11,5 @@ func insert(item: InvItem):
 	if !emptyslots.is_empty(): 
 		emptyslots[0].item = item
 		emptyslots[0].label = item.name
+	print(slots)
 	update.emit()

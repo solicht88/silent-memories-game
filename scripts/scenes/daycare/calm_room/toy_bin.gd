@@ -13,10 +13,13 @@ func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
 	inv.can_open = false
-	if !Dialogic.VAR.inventory.daycare.nap_key:
+	if !player.saveData.nap_key:
+		print("collected")
 		player.collect(item)
-	Dialogic.start("toy_bin")
+		Dialogic.VAR.inventory.daycare.nap_key = false
+		player.saveData.nap_key = true
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	Dialogic.start("toy_bin")
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
