@@ -17,6 +17,7 @@ func collect(item):
 
 func _ready():
 	verify_save_directory(save_file_path)
+	saveData.update_data_vars()
 
 func verify_save_directory(path: String):
 	DirAccess.make_dir_absolute(path)
@@ -28,6 +29,8 @@ func load_data():
 	SceneSwitcher.switch_scene(saveData.CurRoom, saveData.SavePos)
 	#print(inventory.slots)
 	inventory.update.emit()
+	saveData.update_dialogic_vars()
+	#print(saveData.nap_key)
 	print("loaded")
 
 func save_data():
@@ -35,6 +38,7 @@ func save_data():
 	saveData.save_inventory(inventory.slots)
 	#print(saveData.CurRoom)
 	ResourceSaver.save(saveData, save_file_path + save_file_name)
+	#print(saveData.nap_key)
 	print("saved")
 
 func get_input():

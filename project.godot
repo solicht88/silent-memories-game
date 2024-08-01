@@ -78,6 +78,7 @@ variables={
 "doors": {
 "daycare": {
 "kitchen_open": false,
+"nap_open": "",
 "staff_open": false
 }
 },

@@ -11,7 +11,6 @@ func _ready():
 func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
-	inv.can_open = false
 	if !player.saveData.nap_key:
 		player.collect(item)
 		Dialogic.VAR.inventory.daycare.nap_key = false

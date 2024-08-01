@@ -32,6 +32,7 @@ func _on_save_pressed():
 	player.save_data()
 
 func _on_load_pressed():
+	close()
 	transition.play("fade_in")
 	await get_tree().create_timer(0.6).timeout
 	player.load_data()
