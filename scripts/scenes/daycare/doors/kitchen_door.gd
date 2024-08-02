@@ -12,10 +12,8 @@ func _ready():
 func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
-	inv.can_open = false
-	if !Dialogic.VAR.inventory.daycare.staff_key:
+	if !player.saveData.staff_key:
 		Dialogic.timeline_ended.connect(_on_timeline_ended)
-		Dialogic.signal_event.connect(_on_dialogic_signal)
 		Dialogic.start("locked_door")
 	elif player.saveData.kitchen_open:
 		transition.play("fade_in")
@@ -23,18 +21,13 @@ func _on_interact():
 		SceneSwitcher.switch_scene("res://scenes/maps/daycare/kitchen.tscn", location.kitchen)
 	else:
 		Dialogic.timeline_ended.connect(_on_timeline_ended)
-		Dialogic.signal_event.connect(_on_dialogic_signal)
 		Dialogic.start("unlocked_door")
 		player.saveData.kitchen_open = true
-		if Dialogic.VAR.doors.daycare.staff_open:
+		Dialogic.VAR.doors.daycare.kitchen_open = true
+		if player.saveData.staff_open:
 			inv.remove_slot("Staff Key")
-
-func _on_dialogic_signal(argument: String):
-	if argument == "unlocked":
-		pass
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 	player.can_move = true
 	InteractionManager.can_interact = true
-	inv.can_open = true

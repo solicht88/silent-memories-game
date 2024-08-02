@@ -12,7 +12,6 @@ func _ready():
 func _on_interact():
 	player.can_move = false
 	InteractionManager.can_interact = false
-	inv.can_open = false
 	if !player.saveData.nap_key:
 		Dialogic.timeline_ended.connect(_on_timeline_ended)
 		Dialogic.start("locked_door")
@@ -25,9 +24,9 @@ func _on_interact():
 		Dialogic.start("unlocked_door")
 		inv.remove_slot("Nap Room Key")
 		player.saveData.nap_open = true
+		Dialogic.VAR.doors.daycare.nap_open = true
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 	player.can_move = true
 	InteractionManager.can_interact = true
-	inv.can_open = true
