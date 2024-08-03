@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://blto1gygpyqjf"]
+[gd_scene load_steps=9 format=3 uid="uid://blto1gygpyqjf"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_aeo4f"]
 [ext_resource type="Texture2D" uid="uid://dip1b42kgcui4" path="res://tilesets/cutscenes/title_screen/title_screen_bg.png" id="1_qv1vw"]
 [ext_resource type="Theme" uid="uid://m3ywd3orgfuv" path="res://scenes/title_screen/new_game.tres" id="2_0iklp"]
+[ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="2_kuomu"]
 [ext_resource type="Theme" uid="uid://daeugu5tftu2v" path="res://scenes/title_screen/continue.tres" id="4_7l454"]
 [ext_resource type="Theme" uid="uid://60pra6cavevi" path="res://scenes/title_screen/quit.tres" id="5_em41e"]
 [ext_resource type="PackedScene" uid="uid://ds2cqfu3jjjop" path="res://scenes/scene_transition.tscn" id="6_wcoiu"]
+[ext_resource type="PackedScene" uid="uid://dwcokwrsyk1xa" path="res://scenes/save_menu/save_menu.tscn" id="8_7ai7l"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -15,6 +17,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aeo4f")
+
+[node name="player" parent="." instance=ExtResource("2_kuomu")]
 
 [node name="TitleScreenBg" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
@@ -45,6 +49,10 @@ offset_bottom = 665.0
 theme = ExtResource("5_em41e")
 
 [node name="Transition" parent="." instance=ExtResource("6_wcoiu")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SaveMenu" parent="CanvasLayer" instance=ExtResource("8_7ai7l")]
 
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://ccde4yb8427dh"]
+
+[ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="1_o8hcg"]
+[ext_resource type="Texture2D" uid="uid://fgdscyshcwv3" path="res://tilesets/assets/inventory/daycare/blue_chest_key.png" id="2_kit64"]
+
+[resource]
+script = ExtResource("1_o8hcg")
+name = "Blue Chest Key"
+texture = ExtResource("2_kit64")
+description = "A key to open the blue toy box."

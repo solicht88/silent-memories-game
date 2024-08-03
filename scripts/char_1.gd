@@ -25,13 +25,14 @@ func verify_save_directory(path: String):
 func load_data():
 	saveData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
 	#self.position = saveData.SavePos
+	print(saveData.inventory)
 	inventory.slots = saveData.inventory
 	SceneSwitcher.switch_scene(saveData.CurRoom, saveData.SavePos)
 	#print(inventory.slots)
 	inventory.update.emit()
 	saveData.update_dialogic_vars()
 	#print(saveData.nap_key)
-	print("loaded")
+	#print("loaded")
 
 func save_data():
 	saveData.SavePos = self.position
@@ -39,7 +40,7 @@ func save_data():
 	#print(saveData.CurRoom)
 	ResourceSaver.save(saveData, save_file_path + save_file_name)
 	#print(saveData.nap_key)
-	print("saved")
+	#print("saved")
 
 func get_input():
 	var input_direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")

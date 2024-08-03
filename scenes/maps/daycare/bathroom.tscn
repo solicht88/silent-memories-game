@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dw2dxxa0teohn"]
+[gd_scene load_steps=24 format=3 uid="uid://dw2dxxa0teohn"]
 
 [ext_resource type="Texture2D" uid="uid://3e18h4mmn3ww" path="res://tilesets/daycare/bathroom_floor.png" id="1_hkvdn"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/bathroom.gd" id="1_hpvsl"]
@@ -10,9 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://blpvy3013pf1g" path="res://scenes/interaction/interaction.tscn" id="8_ud87l"]
 [ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="8_x8l1x"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/bathroom/washroom_sink.gd" id="10_4nwwm"]
-[ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="10_isjfh"]
+[ext_resource type="Resource" uid="uid://ccde4yb8427dh" path="res://scripts/inventory/items/daycare/blue_chest_key.tres" id="10_470op"]
 [ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="11_1adyd"]
-[ext_resource type="Texture2D" uid="uid://fgdscyshcwv3" path="res://tilesets/assets/inventory/daycare/blue_chest_key.png" id="11_mw8k7"]
 [ext_resource type="PackedScene" uid="uid://df6sq1dsx4qpp" path="res://scenes/pause_menu/pause_menu.tscn" id="14_vj3jw"]
 [ext_resource type="PackedScene" uid="uid://dwcokwrsyk1xa" path="res://scenes/save_menu/save_menu.tscn" id="15_xjcxi"]
 
@@ -843,12 +842,6 @@ size = Vector2(201, 90)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7unan"]
 size = Vector2(21, 45)
 
-[sub_resource type="Resource" id="Resource_xsmk5"]
-script = ExtResource("10_isjfh")
-name = "Blue Chest Key"
-texture = ExtResource("11_mw8k7")
-description = "A key to open the blue toy box."
-
 [node name="bathroom" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_hpvsl")
@@ -912,7 +905,7 @@ script = ExtResource("8_x8l1x")
 [node name="washroom_sink" parent="." instance=ExtResource("8_ud87l")]
 position = Vector2(720, 317)
 script = ExtResource("10_4nwwm")
-item = SubResource("Resource_xsmk5")
+item = ExtResource("10_470op")
 
 [node name="paper_towels" parent="." instance=ExtResource("8_ud87l")]
 position = Vector2(838, 265)
