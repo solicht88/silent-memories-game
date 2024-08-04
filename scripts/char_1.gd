@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var save_file_path = "user://save/"
 var save_file_name = "SaveData.tres"
-var save_inv_name = "InvData.tres"
+#var save_inv_name = "InvData.tres"
 var saveData = SaveData.new()
 
 @export var inventory: Inventory
@@ -25,16 +25,15 @@ func verify_save_directory(path: String):
 
 func load_data():
 	saveData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
-	inventory = ResourceLoader.load(save_file_path + save_inv_name).duplicate(true)
+	#inventory = ResourceLoader.load(save_file_path + save_inv_name).duplicate(true)
 	#self.position = saveData.SavePos
 	#inventory.slots = saveData.inventory
 	SceneSwitcher.switch_scene(saveData.CurRoom, saveData.SavePos)
 	#print(inventory.slots)
-	#for item in saveData.inventory:
-		#inventory.insert(item)
-	inventory.update.emit()
 	saveData.update_dialogic_vars()
-	#print(saveData.inventory)
+	print(saveData.inventory)
+	inventory.load.emit(saveData.inventory)
+	inventory.update.emit()
 	#print(saveData.nap_key)
 	#print("loaded")
 
@@ -42,9 +41,9 @@ func save_data():
 	saveData.SavePos = self.position
 	#saveData.save_inventory(inventory.slots)
 	#print(saveData.CurRoom)
-	#print(saveData.inventory)
 	ResourceSaver.save(saveData, save_file_path + save_file_name)
-	ResourceSaver.save(inventory, save_file_path + save_inv_name)
+	#ResourceSaver.save(inventory, save_file_path + save_inv_name)
+	#print(saveData.inventory)
 	#print(saveData.nap_key)
 	#print("saved")
 

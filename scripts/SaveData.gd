@@ -4,7 +4,7 @@ class_name SaveData
 
 @export var CurRoom: String
 @export var SavePos: Vector2
-#@export var inventory: Array = Array()
+@export var inventory: Array = Array()
 
 @export var nap_open = false
 @export var staff_open = false
@@ -18,11 +18,9 @@ class_name SaveData
 func save_position(value: Vector2):
 	SavePos = value
 
-'''
 func load_inventory(item, file):
 	if item:
 		inventory.append(file)
-'''
 
 func update_data_vars():
 	nap_open = Dialogic.VAR.doors.daycare.nap_open
@@ -42,5 +40,5 @@ func update_dialogic_vars():
 	Dialogic.VAR.inventory.daycare.pink_key = pink_key
 	Dialogic.VAR.inventory.daycare.staff_key = staff_key
 	Dialogic.VAR.inventory.daycare.blue_key = blue_key
-	#load_inventory(blue_key, "res://scripts/inventory/items/daycare/blue_chest_key.tres")
+	load_inventory(blue_key, "res://scripts/inventory/items/daycare/blue_chest_key.tres")
 	Dialogic.VAR.inventory.daycare.caretaker_key = caretaker_key

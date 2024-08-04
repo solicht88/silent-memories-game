@@ -3,6 +3,7 @@ extends Resource
 class_name Inventory
 
 signal update
+signal load
 
 @export var slots: Array[InvSlot]
 
