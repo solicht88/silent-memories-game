@@ -4,7 +4,7 @@ class_name SaveData
 
 @export var CurRoom: String
 @export var SavePos: Vector2
-@export var inventory: Array[InvSlot]
+@export var inventory = Array()
 
 @export var enter_cutscene = false
 
@@ -44,5 +44,6 @@ func update_dialogic_vars():
 	Dialogic.VAR.inventory.daycare.pink_key = pink_key
 	Dialogic.VAR.inventory.daycare.staff_key = staff_key
 	Dialogic.VAR.inventory.daycare.blue_key = blue_key
-	#load_inventory(blue_key, "res://scripts/inventory/items/daycare/blue_chest_key.tres")
+	if blue_key:
+		inventory.append(preload("res://scripts/inventory/items/daycare/blue_chest_key.tres"))
 	Dialogic.VAR.inventory.daycare.caretaker_key = caretaker_key
