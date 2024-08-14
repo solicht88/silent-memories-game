@@ -1,6 +1,7 @@
 ## 🌙 Silent Memories
 
 Silent Memories is a WIP pixel RPG/puzzle game.  
+**Currently playable as a demo in the Godot engine!**
 
 You wake up in your old kindergarten, unable to speak.  
 Luckily your best friend is here, but they can't see anything.  
@@ -18,4 +19,4 @@ Dialogic 2 (https://github.com/dialogic-godot/dialogic)
 
 **Notes:**  
 - Tilesets are drawn on multiple frames of the same .aseprite file  
-- The game can only be run through the Godot Engine at the moment. Since it is not complete, expect errors!
+- The game can only be run through the Godot Engine at the moment. Since it is not complete, expect bugs!
