@@ -30,20 +30,26 @@ directories/dch_directory={
 directories/dtl_directory={
 "bathroom_sign": "res://dialogues/daycare/reception/bathroom_sign.dtl",
 "blocks": "res://dialogues/daycare/playroom/blocks.dtl",
+"blue_book": "res://dialogues/daycare/nap_room/blue_book.dtl",
 "blue_chest": "res://dialogues/daycare/playroom/blue_chest.dtl",
 "book": "res://dialogues/daycare/reception/book.dtl",
+"calm_book": "res://dialogues/daycare/calm_room/calm_book.dtl",
 "calm_sign": "res://dialogues/daycare/playroom/calm_sign.dtl",
 "coffee_machine": "res://dialogues/daycare/staff_room/coffee_machine.dtl",
 "couch": "res://dialogues/daycare/staff_room/couch.dtl",
 "cubby": "res://dialogues/daycare/reception/cubby.dtl",
+"daycare_door": "res://dialogues/daycare/reception/daycare_door.dtl",
+"demo_end": "res://dialogues/daycare/reception/demo_end.dtl",
 "dining_table": "res://dialogues/daycare/kitchen/dining_table.dtl",
 "dollhouse": "res://dialogues/daycare/playroom/dollhouse.dtl",
 "faces": "res://dialogues/daycare/playroom/faces.dtl",
 "fridge": "res://dialogues/daycare/kitchen/fridge.dtl",
+"green_book": "res://dialogues/daycare/calm_room/green_book.dtl",
 "locked_door": "res://dialogues/locked_door.dtl",
 "mushroom": "res://dialogues/daycare/calm_room/mushroom.dtl",
 "nameplate": "res://dialogues/daycare/reception/nameplate.dtl",
 "nap_sign": "res://dialogues/daycare/playroom/nap_sign.dtl",
+"orange_book": "res://dialogues/daycare/calm_room/orange_book.dtl",
 "paper_towels": "res://dialogues/daycare/bathroom/paper_towels.dtl",
 "pink_book": "res://dialogues/daycare/calm_room/pink_book.dtl",
 "pink_chest": "res://dialogues/daycare/playroom/pink_chest.dtl",
@@ -51,6 +57,7 @@ directories/dtl_directory={
 "plant": "res://dialogues/daycare/reception/plant.dtl",
 "play_sign": "res://dialogues/daycare/reception/play_sign.dtl",
 "playroom_book": "res://dialogues/daycare/playroom/playroom_book.dtl",
+"purple_book": "res://dialogues/daycare/calm_room/purple_book.dtl",
 "purple_heart": "res://dialogues/daycare/playroom/purple_heart.dtl",
 "rainbow": "res://dialogues/daycare/reception/rainbow.dtl",
 "red_book": "res://dialogues/daycare/nap_room/red_book.dtl",
@@ -78,8 +85,9 @@ directories/dtl_directory={
 variables={
 "doors": {
 "daycare": {
+"daycare_open": false,
 "kitchen_open": false,
-"nap_open": "",
+"nap_open": false,
 "staff_open": false
 }
 },
@@ -99,7 +107,7 @@ variables={
 "response": ""
 }
 }
-layout/style_list=["res://dialogues/custom_style.tres"]
+layout/style_list=["res://dialogues/custom_style.tres", "res://dialogues/popup_style.tres"]
 layout/default_style="res://dialogues/custom_style.tres"
 glossary/default_case_sensitive=true
 text/letter_speed=0.01

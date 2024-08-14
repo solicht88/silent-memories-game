@@ -1168,13 +1168,22 @@ position = Vector2(524, 349.75)
 shape = SubResource("RectangleShape2D_x47pu")
 
 [node name="red_book" parent="." instance=ExtResource("11_eio7d")]
-position = Vector2(1142, 280)
+position = Vector2(1165, 279)
 script = ExtResource("12_xhhf3")
 item = ExtResource("11_m7urw")
+
+[node name="blue_book" parent="." instance=ExtResource("11_eio7d")]
+position = Vector2(1086, 228)
+script = ExtResource("7_v1p7t")
+
+[node name="nap_book" parent="." instance=ExtResource("11_eio7d")]
+position = Vector2(1012, 281)
+script = ExtResource("7_v1p7t")
 
 [node name="Transition" parent="." instance=ExtResource("8_rsply")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("10_75uyp")]
 

@@ -5,7 +5,8 @@ else:
 	[end_timeline]
 if {inventory.daycare.safe_code}  ==  "5372" && {inventory.daycare.caretaker_key} == false:
 	char_1 (Neutral): It's open!
-	char_1: Is this the key to the exit?
+	char_1: Is this the caretaker's key?
+	char_1: I think I can open the main door with this.
 	Obtained 'Caretaker Key!'
 	[signal arg="gained_key"]
 	set {inventory.daycare.caretaker_key} = true

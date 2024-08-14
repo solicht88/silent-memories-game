@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cq304oojpibow"]
+[gd_scene load_steps=28 format=3 uid="uid://cq304oojpibow"]
 
 [ext_resource type="Script" path="res://scripts/scenes/daycare/reception/reception.gd" id="1_6lviy"]
 [ext_resource type="PackedScene" uid="uid://bj5svrmek3bws" path="res://scenes/characters/char_1.tscn" id="1_n8fkg"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/staff_door.gd" id="10_0246s"]
 [ext_resource type="Script" path="res://scripts/scenes/daycare/doors/kitchen_door.gd" id="11_0xca7"]
 [ext_resource type="Script" path="res://scripts/scenes/object_dialogue.gd" id="11_wxvbj"]
+[ext_resource type="Script" path="res://scripts/scenes/daycare/reception/daycare_door.gd" id="12_pa1dl"]
 [ext_resource type="PackedScene" uid="uid://c22v7u06o1j6g" path="res://scenes/inventory/inventory_ui.tscn" id="13_mgqro"]
 [ext_resource type="PackedScene" uid="uid://df6sq1dsx4qpp" path="res://scenes/pause_menu/pause_menu.tscn" id="14_x74lv"]
 [ext_resource type="PackedScene" uid="uid://dwcokwrsyk1xa" path="res://scenes/save_menu/save_menu.tscn" id="15_ifqog"]
@@ -639,6 +640,9 @@ size = Vector2(52, 105)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyllo"]
 size = Vector2(273, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_il8q8"]
+size = Vector2(214, 20)
+
 [node name="reception" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_6lviy")
@@ -751,6 +755,15 @@ script = ExtResource("11_wxvbj")
 [node name="bathroom_sign" parent="." instance=ExtResource("7_72jl3")]
 position = Vector2(1085, 84)
 script = ExtResource("11_wxvbj")
+
+[node name="daycare_door" type="Node2D" parent="."]
+script = ExtResource("12_pa1dl")
+
+[node name="InteractionArea" parent="daycare_door" instance=ExtResource("5_6gira")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="daycare_door/InteractionArea"]
+position = Vector2(640, 750)
+shape = SubResource("RectangleShape2D_il8q8")
 
 [node name="Transition" parent="." instance=ExtResource("19_ldw6p")]
 

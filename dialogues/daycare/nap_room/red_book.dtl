@@ -1,9 +1,9 @@
-placeholder
+"Collection of Bedtime Stories"
 if {inventory.daycare.pink_key} == false:
 	char_1 (Neutral): !
 	char_1: A key fell out of the book.
 	Obtained 'Pink Chest Key!'
 	set {inventory.daycare.pink_key} = true
 else:
-	idk what to put yet
+	char_1: None of these stories look interesting.
 [end_timeline]

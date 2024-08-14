@@ -11,6 +11,7 @@ class_name SaveData
 @export var nap_open = false
 @export var staff_open = false
 @export var kitchen_open = false
+@export var daycare_open = false
 @export var nap_key = false
 @export var pink_key = false
 @export var staff_key = false
@@ -40,6 +41,7 @@ func update_dialogic_vars():
 	Dialogic.VAR.doors.daycare.nap_open = nap_open
 	Dialogic.VAR.doors.daycare.staff_open = staff_open
 	Dialogic.VAR.doors.daycare.kitchen_open = kitchen_open
+	Dialogic.VAR.doors.daycare.daycare_open = daycare_open
 	Dialogic.VAR.inventory.daycare.nap_key = nap_key
 	Dialogic.VAR.inventory.daycare.pink_key = pink_key
 	Dialogic.VAR.inventory.daycare.staff_key = staff_key

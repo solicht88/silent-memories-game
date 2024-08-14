@@ -1,0 +1,7 @@
+if {inventory.daycare.caretaker_key} == false:
+	char_1 (Neutral): The main entrance to the daycare.
+	char_1 (Neutral): It's locked.
+else:
+	Unlocked the door!
+	char_1 (Neutral): Time to leave.
+[end_timeline]

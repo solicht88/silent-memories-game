@@ -830,6 +830,7 @@ shape = SubResource("RectangleShape2D_gv3f2")
 [node name="Transition" parent="." instance=ExtResource("7_wad5l")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("11_2sfq4")]
 
