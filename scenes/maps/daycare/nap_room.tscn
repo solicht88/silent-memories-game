@@ -1096,7 +1096,7 @@ size = Vector2(90, 116)
 size = Vector2(21, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x47pu"]
-size = Vector2(870, 198.5)
+size = Vector2(838, 198.5)
 
 [node name="nap_room" type="Node2D"]
 y_sort_enabled = true
@@ -1164,7 +1164,7 @@ script = ExtResource("7_v1p7t")
 [node name="InteractionArea" parent="sleep_area" instance=ExtResource("6_5uql3")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sleep_area/InteractionArea"]
-position = Vector2(524, 349.75)
+position = Vector2(508, 349.75)
 shape = SubResource("RectangleShape2D_x47pu")
 
 [node name="red_book" parent="." instance=ExtResource("11_eio7d")]

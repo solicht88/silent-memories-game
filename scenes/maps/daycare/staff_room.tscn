@@ -827,6 +827,18 @@ z_index = 1
 position = Vector2(440, 254)
 shape = SubResource("RectangleShape2D_gv3f2")
 
+[node name="safe_hint" parent="." instance=ExtResource("8_fortv")]
+position = Vector2(692, 490)
+script = ExtResource("9_6rkyf")
+
+[node name="teal_book" parent="." instance=ExtResource("8_fortv")]
+position = Vector2(761, 442)
+script = ExtResource("9_6rkyf")
+
+[node name="old_record" parent="." instance=ExtResource("8_fortv")]
+position = Vector2(844, 491)
+script = ExtResource("9_6rkyf")
+
 [node name="Transition" parent="." instance=ExtResource("7_wad5l")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

@@ -26,14 +26,13 @@ func verify_save_directory(path: String):
 func load_data():
 	saveData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
 	#inventory.slots = saveData.inventory
-	inventory.slots = Array()
-	for item in saveData.inventory:
-		inventory.slots.append(item)
+	saveData.update_dialogic_vars()
+	for i in saveData.inventory.size():
+		inventory.slots.insert(i, saveData.inventory[i])
 	inventory.update.emit()
 	#inventory = ResourceLoader.load(save_file_path + save_inv_name).duplicate(true)
 	#self.position = saveData.SavePos
 	SceneSwitcher.switch_scene(saveData.CurRoom, saveData.SavePos)
-	#saveData.update_dialogic_vars()
 	#inventory.load.emit(saveData.inventory)
 	#print(saveData.nap_key)
 	print("loaded")

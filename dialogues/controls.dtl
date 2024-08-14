@@ -1,0 +1,6 @@
+[style name="popup_style"]
+* Click to proceed dialogue/press buttons\
+* WASD or Arrow keys to move\
+* 'Z' to interact with objects\
+* 'X' to open/close menus
+[style name="custom_style"]

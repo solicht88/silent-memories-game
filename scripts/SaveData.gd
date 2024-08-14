@@ -6,7 +6,7 @@ class_name SaveData
 @export var SavePos: Vector2
 @export var inventory = Array()
 
-@export var enter_cutscene = false
+@export var enter_cutscene = true
 
 @export var nap_open = false
 @export var staff_open = false

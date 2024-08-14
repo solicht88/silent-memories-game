@@ -7,7 +7,10 @@ extends Control
 
 func _ready():
 	player.visible = false
-	transition.play("fade_out")
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	Dialogic.start("controls")
+	var colorRect = transition.get_child(0)
+	colorRect.self_modulate = "ffffff"
 
 func _on_new_game_pressed():
 	if can_press:
@@ -18,9 +21,14 @@ func _on_new_game_pressed():
 
 func _on_continue_pressed():
 	if can_press:
+		save_menu.is_open = true
 		save_menu.open()
 
 func _on_quit_pressed():
 	if can_press:
 		can_press = false
 		get_tree().quit()
+
+func _on_timeline_ended():
+	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
+	transition.play("fade_out")

@@ -11,8 +11,9 @@ var kitchen = Vector2(290, 480)
 
 func _ready():
 	pause.pause()
+	#print(player.saveData.enter_cutscene)
 	transition.play("fade_out")
-	if player.saveData.enter_cutscene == false:
+	if !player.saveData.enter_cutscene:
 		player.saveData.enter_cutscene = true
 		player._animation_player.play("start_cutscene")
 		await get_tree().create_timer(4.5).timeout

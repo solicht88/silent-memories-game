@@ -1322,7 +1322,7 @@ position = Vector2(436, 231)
 script = ExtResource("14_mnoyc")
 
 [node name="pink_book" parent="." instance=ExtResource("8_gfshb")]
-position = Vector2(500, 276)
+position = Vector2(512, 279)
 script = ExtResource("14_mnoyc")
 
 [node name="purple_book" parent="." instance=ExtResource("8_gfshb")]

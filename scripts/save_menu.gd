@@ -6,6 +6,10 @@ extends Control
 
 var is_open = false
 
+func _input(event):
+	if event.is_action_pressed("open_menu") && is_open == true:
+		close()
+
 func _ready():
 	close()
 

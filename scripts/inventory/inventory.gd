@@ -5,7 +5,7 @@ class_name Inventory
 signal update
 signal load
 
-@export var slots: Array[InvSlot]
+@export var slots: Array
 
 func insert(item: InvItem):
 	var emptyslots = slots.filter(func(slot): return slot.item == null)

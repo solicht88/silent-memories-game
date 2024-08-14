@@ -3,7 +3,7 @@ extends Node2D
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var location = $".."
 @onready var transition = $"../Transition"
-@onready var player = $"../player"
+#@onready var player = $"../player"
 @onready var pause = $"../CanvasLayer/PauseMenu"
 
 func _ready():
