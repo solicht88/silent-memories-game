@@ -9,7 +9,7 @@ var can_open = true
 
 func _ready():
 	inv.update.connect(update_slots)
-	inv.load.connect(load_slots)
+	#inv.load.connect(load_slots)
 	update_slots()
 	close()
 
@@ -21,6 +21,7 @@ func update_slots():
 	#print(inv)
 	#print("updated")
 
+'''
 func load_slots(items):
 	var new_slots = Array()
 	for i in range(items.size()):
@@ -31,6 +32,7 @@ func load_slots(items):
 		#print(new_slots)
 	#inv.slots = new_slots
 	print(inv.slots)
+'''
 
 func remove_slot(item: String):
 	for i in range(min(inv.slots.size(), slots.size())):

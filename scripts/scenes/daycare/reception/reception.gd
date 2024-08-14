@@ -31,6 +31,7 @@ func _on_dialogic_signal(argument: String):
 	if argument == "its a signal":
 		print("knock knock")
 '''
+
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 	player.can_move = true

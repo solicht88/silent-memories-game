@@ -3,8 +3,8 @@ extends CharacterBody2D
 var save_file_path = "user://save/"
 var save_file_name = "SaveData.tres"
 #var save_inv_name = "InvData.tres"
-var saveData = preload("res://scripts/player_data.tres")
 
+@export var saveData = preload("res://scripts/player_data.tres")
 @export var inventory: Inventory
 @export var speed = 300
 
@@ -18,34 +18,35 @@ func collect(item):
 
 func _ready():
 	verify_save_directory(save_file_path)
-	saveData.update_data_vars()
+	#saveData.update_data_vars()
 
 func verify_save_directory(path: String):
 	DirAccess.make_dir_absolute(path)
 
 func load_data():
 	saveData = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
+	inventory.slots = saveData.inventory
 	#inventory = ResourceLoader.load(save_file_path + save_inv_name).duplicate(true)
 	#self.position = saveData.SavePos
-	#inventory.slots = saveData.inventory
 	SceneSwitcher.switch_scene(saveData.CurRoom, saveData.SavePos)
-	#print(inventory.slots)
-	saveData.update_dialogic_vars()
-	print(saveData.inventory)
-	inventory.load.emit(saveData.inventory)
+	#saveData.update_dialogic_vars()
+	#inventory.load.emit(saveData.inventory)
 	inventory.update.emit()
 	#print(saveData.nap_key)
-	#print("loaded")
+	print("loaded")
+	#print(saveData.inventory)
+	#print(inventory.slots)
 
 func save_data():
 	saveData.SavePos = self.position
-	#saveData.save_inventory(inventory.slots)
+	saveData.inventory = inventory.slots
 	#print(saveData.CurRoom)
 	ResourceSaver.save(saveData, save_file_path + save_file_name)
 	#ResourceSaver.save(inventory, save_file_path + save_inv_name)
-	#print(saveData.inventory)
 	#print(saveData.nap_key)
-	#print("saved")
+	print("saved")
+	#print(saveData.inventory)
+	#print(inventory.slots)
 
 func get_input():
 	var input_direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")

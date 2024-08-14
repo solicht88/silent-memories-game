@@ -4,13 +4,13 @@ extends Node2D
 @onready var location = $".."
 @onready var transition = $"../Transition"
 @onready var player = $"../player"
+@onready var pause = $"../CanvasLayer/PauseMenu"
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
 
 func _on_interact():
-	player.can_move = false
-	InteractionManager.can_interact = false
+	pause.pause()
 	transition.play("fade_in")
 	await get_tree().create_timer(0.6).timeout
 	SceneSwitcher.switch_scene("res://scenes/maps/daycare/reception.tscn", location.reception)

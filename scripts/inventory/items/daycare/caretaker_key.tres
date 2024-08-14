@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://dmijl828g5rqv"]
+
+[ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="1_rekqt"]
+[ext_resource type="Texture2D" uid="uid://xi7ae4t2tq53" path="res://tilesets/assets/inventory/daycare/caretaker_key.png" id="2_2sbvf"]
+
+[resource]
+script = ExtResource("1_rekqt")
+name = "Caretaker Key"
+texture = ExtResource("2_2sbvf")
+description = "A key to the daycare's front door."

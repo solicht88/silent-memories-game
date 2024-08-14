@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://naaiy2n1jtfm"]
+
+[ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="1_k1td2"]
+[ext_resource type="Texture2D" uid="uid://bsbcbtcm8yr2w" path="res://tilesets/assets/inventory/daycare/staff_room_key.png" id="2_u8dmr"]
+
+[resource]
+script = ExtResource("1_k1td2")
+name = "Staff Key"
+texture = ExtResource("2_u8dmr")
+description = "A key to unlock staff only rooms."
