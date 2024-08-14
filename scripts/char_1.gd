@@ -3,7 +3,7 @@ extends CharacterBody2D
 var save_file_path = "user://save/"
 var save_file_name = "SaveData.tres"
 #var save_inv_name = "InvData.tres"
-var saveData = SaveData.new()
+var saveData = preload("res://scripts/player_data.tres")
 
 @export var inventory: Inventory
 @export var speed = 300

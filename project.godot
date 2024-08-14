@@ -58,6 +58,7 @@ directories/dtl_directory={
 "safe": "res://dialogues/daycare/staff_room/safe.dtl",
 "scribbles": "res://dialogues/daycare/calm_room/scribbles.dtl",
 "sleep_area": "res://dialogues/daycare/nap_room/sleep_area.dtl",
+"start": "res://dialogues/daycare/reception/start.dtl",
 "stickmen": "res://dialogues/daycare/playroom/stickmen.dtl",
 "stove": "res://dialogues/daycare/kitchen/stove.dtl",
 "succulent": "res://dialogues/daycare/reception/succulent.dtl",

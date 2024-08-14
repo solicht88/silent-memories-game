@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SaveData" load_steps=2 format=3 uid="uid://cxuqipbucitg7"]
+
+[ext_resource type="Script" path="res://scripts/SaveData.gd" id="1_2448i"]
+
+[resource]
+script = ExtResource("1_2448i")
+CurRoom = ""
+SavePos = Vector2(0, 0)
+inventory = null
+enter_cutscene = false
+nap_open = false
+staff_open = false
+kitchen_open = false
+nap_key = false
+pink_key = false
+staff_key = false
+blue_key = false
+caretaker_key = false

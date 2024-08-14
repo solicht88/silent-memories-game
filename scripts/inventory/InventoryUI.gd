@@ -22,14 +22,14 @@ func update_slots():
 	#print("updated")
 
 func load_slots(items):
-	var new_slots: Array[InvSlot] = Array()
+	var new_slots = Array()
 	for i in range(items.size()):
 		var item = load(items[i])
 		slots[i].load_item(item)
 		print(item)
 		new_slots.push_back(item)
 		#print(new_slots)
-	inv.slots = new_slots
+	#inv.slots = new_slots
 	print(inv.slots)
 
 func remove_slot(item: String):

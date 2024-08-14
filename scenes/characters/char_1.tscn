@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bj5svrmek3bws"]
+[gd_scene load_steps=13 format=3 uid="uid://bj5svrmek3bws"]
 
 [ext_resource type="Texture2D" uid="uid://cjaq4vg860b4v" path="res://sprites/char_1_ver_2.png" id="1_236t4"]
 [ext_resource type="Script" path="res://scripts/char_1.gd" id="1_o8cs5"]
@@ -150,9 +150,26 @@ tracks/1/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_3fej8"]
+resource_name = "start_cutscene"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5, 2.5, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [16, 0, 4, 0, 8, 0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0bgva"]
 _data = {
 "RESET": SubResource("Animation_1a1mq"),
+"start_cutscene": SubResource("Animation_3fej8"),
 "walk_down": SubResource("Animation_lu32i"),
 "walk_left": SubResource("Animation_xyr2w"),
 "walk_right": SubResource("Animation_paq4t"),
@@ -173,7 +190,7 @@ inventory = ExtResource("2_0rgk8")
 position = Vector2(2.08165e-12, -40)
 texture = ExtResource("1_236t4")
 hframes = 4
-vframes = 4
+vframes = 5
 frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
